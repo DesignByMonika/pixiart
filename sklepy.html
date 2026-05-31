@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sklepy internetowe — Pixiart. Projektujemy e-commerce na WooCommerce i dedykowanych platformach. Płatności, kurierzy, SEO w cenie. Zamów bezpłatną konsultację.">
+  <title>Sklepy internetowe — Pixiart</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+        <a href="#" class="logo">
+            <img src="images/sygnet.png" alt="Pixiart Logo">
+        </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="index.html#wsparcie">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk </a></li>
+        </ul>
+      </li>
+
+     <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
+    <small style="color: var(--blue); text-transform: uppercase; letter-spacing: 1px;">Menu</small>
+  </div>
+  
+  <a href="strony.html" class="mob-link">Strony WWW</a>
+  <a href="sklepy.html" class="mob-link">Sklepy Online</a>
+  <a href="identyfikacja.html" class="mob-link">Grafika + Druk</a>
+  <a href="realizacje.html" class="mob-link">Realizacje</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  
+  <div style="margin-top: 20px; padding: 0 20px;">
+    <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Strona główna</a>
+      <span>/</span>
+      <strong>Sklepy internetowe</strong>
+    </div>
+    <div class="hero__inner">
+      <div>
+        <div class="hero__label">E-commerce</div>
+        <h1>Sklep internetowy, który naprawdę sprzedaje</h1>
+        <p class="hero__sub">Projektujemy sklepy e-commerce gotowe do sprzedaży od pierwszego dnia — z płatnościami, kurierami i SEO w standardzie. Żadnych dodatkowych kosztów na starcie.</p>
+        <div class="hero__actions">
+          <a href="index.html#kontakt" class="btn-primary">Zamów bezpłatną konsultację →</a>
+          <a href="#pakiety" class="btn-ghost">Zobacz pakiety</a>
+        </div>
+      </div>
+
+      <!-- SHOP MOCKUP -->
+      <div class="hero__shop">
+        <div class="shop-screen shop-main">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#ff5f57"></div>
+            <div class="ss-dot" style="background:#febc2e"></div>
+            <div class="ss-dot" style="background:#28c840"></div>
+          </div>
+          <div class="ss-nav">
+            <div class="ss-logo"></div>
+            <div class="ss-search"></div>
+            <div class="ss-cart-icon"></div>
+          </div>
+          <div class="ss-cats">
+            <div class="ss-cat" style="width:60px;background:#9d26ff;opacity:.8"></div>
+            <div class="ss-cat" style="width:50px;background:#e5e7eb"></div>
+            <div class="ss-cat" style="width:70px;background:#e5e7eb"></div>
+            <div class="ss-cat" style="width:45px;background:#e5e7eb"></div>
+          </div>
+          <div class="ss-products">
+            <div class="ss-product">
+              <div class="ss-product-img" style="background:linear-gradient(135deg,#f3e8ff,#e0f2fe)"></div>
+              <div class="ss-product-info"><div class="ss-product-name"></div><div class="ss-product-price"></div></div>
+            </div>
+            <div class="ss-product">
+              <div class="ss-product-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)"></div>
+              <div class="ss-product-info"><div class="ss-product-name"></div><div class="ss-product-price"></div></div>
+            </div>
+            <div class="ss-product">
+              <div class="ss-product-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)"></div>
+              <div class="ss-product-info"><div class="ss-product-name"></div><div class="ss-product-price"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CART -->
+        <div class="shop-screen shop-cart">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#ff5f57"></div>
+            <div class="ss-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="sc-body">
+            <div class="sc-title"></div>
+            <div class="sc-item">
+              <div class="sc-thumb" style="background:linear-gradient(135deg,#f3e8ff,#e0f2fe)"></div>
+              <div class="sc-info"><div class="sc-name"></div><div class="sc-price"></div></div>
+            </div>
+            <div class="sc-item">
+              <div class="sc-thumb" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)"></div>
+              <div class="sc-info"><div class="sc-name"></div><div class="sc-price"></div></div>
+            </div>
+            <div class="sc-divider"></div>
+            <div class="sc-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CO ZAWIERA KAŻDY SKLEP -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Standard jakości</div>
+      <div class="sec-title">Co zawiera każdy sklep</div>
+      <p class="sec-sub" style="color:var(--muted)">Bez ukrytych kosztów — poniższe elementy są standardem w każdym naszym projekcie e-commerce.</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h4>Płatności online</h4>
+        <p>Przelewy24, Stripe, BLIK, płatność kartą — klient płaci tak, jak lubi. Konfigurujemy i testujemy każdą metodę płatności przed uruchomieniem.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h4>Kurierzy i InPost</h4>
+        <p>Integracja z InPost (paczkomaty), DPD, DHL i innymi kurierami. Automatyczne etykiety wysyłkowe i śledzenie przesyłek dla klientów.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h4>Mobile-first</h4>
+        <p>Ponad 70% zakupów online odbywa się na telefonie. Każdy sklep projektujemy zaczynając od widoku mobilnego, żeby konwersja była jak najwyższa.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h4>SEO dla sklepu</h4>
+        <p>Poprawna struktura kategorii i produktów, meta tagi, dane strukturalne (schema.org) i szybkość ładowania — fundament pod pozycjonowanie.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛠️</div>
+        <h4>Panel zarządzania</h4>
+        <p>Dodawanie produktów, zarządzanie zamówieniami, stany magazynowe, rabaty i kody promocyjne — wszystko w jednym, intuicyjnym panelu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h4>Bezpieczeństwo</h4>
+        <p>Certyfikat SSL, zgodność z RODO, regulamin i polityka prywatności w standardzie. Sklep gotowy na wymogi prawne od pierwszego dnia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRACJE -->
+<section style="background:var(--bg2);">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Integracje</div>
+      <div class="sec-title">Łączymy z narzędziami, których używasz</div>
+      <p class="sec-sub" style="color:var(--muted)">Sklep działa sprawnie razem z Twoim ekosystemem narzędzi.</p>
+    </div>
+    <div class="integrations reveal">
+      <div class="int-card">
+        <div class="int-icon">📬</div>
+        <h4>Przelewy24 / BLIK</h4>
+        <p>Najpopularniejszy bramka płatności w Polsce</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">📦</div>
+        <h4>InPost / DPD / DHL</h4>
+        <p>Automaty paczkowe i kurierzy w jednym miejscu</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">📊</div>
+        <h4>Google Analytics 4</h4>
+        <p>Śledzenie konwersji, koszyków i przychodów</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">🔗</div>
+        <h4>Baselinker</h4>
+        <p>Zarządzanie zamówieniami z wielu kanałów sprzedaży</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">📧</div>
+        <h4>Mailchimp / Freshmail</h4>
+        <p>E-mail marketing i automatyzacja komunikacji</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">🏷️</div>
+        <h4>Facebook / Meta Pixel</h4>
+        <p>Remarketing i śledzenie kampanii reklamowych</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">🧾</div>
+        <h4>Fakturownia / iFirma</h4>
+        <p>Automatyczne wystawianie faktur przy zamówieniu</p>
+      </div>
+      <div class="int-card">
+        <div class="int-icon">📍</div>
+        <h4>Google Merchant</h4>
+        <p>Produkty w wyszukiwarce Google Shopping</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKIETY -->
+<section class="light" id="pakiety">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety</div>
+      <div class="sec-title">Wybierz pakiet dla swojego sklepu</div>
+      <p class="sec-sub">Trzy opcje dopasowane do skali działalności i budżetu.</p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>Sklep Starter</h3>
+        <p class="muted">Gotowy szablon + konfiguracja</p>
+        <div class="price">od 1 490 zł</div>
+        <ul>
+          <li>Sklep na sprawdzonym szablonie</li>
+          <li>Do 50 produktów</li>
+          <li>Płatności online (Przelewy24 / Stripe)</li>
+          <li>Integracja z InPost / kurierami</li>
+          <li>Certyfikat SSL</li>
+          <li>Panel zarządzania zamówieniami</li>
+          <li class="no">Własny projekt graficzny</li>
+          <li class="no">Integracja z Baselinker</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="index.html#kontakt" class="card-btn">Zamów</a>
+      </div>
+
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+        <div class="card-icon">🏪</div>
+        <h3>Sklep Standard</h3>
+        <p class="muted">Projekt Premium + pełna konfiguracja</p>
+        <div class="price">
+          <span class="old">5 990 zł</span>
+          3 990 zł
+        </div>
+        <ul>
+          <li>Unikalny projekt graficzny sklepu</li>
+          <li>Nielimitowana liczba produktów</li>
+          <li>Płatności (Przelewy24 / Stripe / BLIK)</li>
+          <li>Integracja z InPost, DPD, kurierami</li>
+          <li>Certyfikat SSL + analityka Google</li>
+          <li><strong>Podstawowe SEO sklepu GRATIS</strong></li>
+          <li>Facebook / Meta Pixel</li>
+          <li class="no">Integracja z ERP / Baselinker</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA KAMPANIĘ META</div>
+        <a href="index.html#kontakt" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Sklep Premium</h3>
+        <p class="muted">Zaawansowany e-commerce od zera</p>
+        <div class="price">od 8 990 zł</div>
+        <ul>
+          <li>Dedykowany projekt UX/UI</li>
+          <li>Zaawansowane filtry i wyszukiwarka</li>
+          <li>Program lojalnościowy / kody rabatowe</li>
+          <li>Integracja z ERP / Baselinker</li>
+          <li>Pełne SEO + audyt prędkości</li>
+          <li>Google Merchant + Shopping</li>
+          <li>Automatyczne faktury (iFirma / Fakturownia)</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="index.html#kontakt" class="card-btn">Zamów</a>
+      </div>
+    </div>
+
+    <!-- TABELA PORÓWNAWCZA -->
+    <div class="reveal" style="margin-top:60px;">
+      <h3 style="font-size:22px;font-weight:800;margin-bottom:8px;text-align:center;">Porównanie pakietów</h3>
+      <p style="text-align:center;color:#888;font-size:14px;margin-bottom:0;">Co dokładnie dostajesz w każdym pakiecie?</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Funkcja</th>
+            <th>Starter</th>
+            <th class="featured">Standard</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Własny projekt graficzny</td><td><span class="no-val">✕</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Liczba produktów</td><td>do 50</td><td class="featured">nielimitowana</td><td>nielimitowana</td></tr>
+          <tr><td>Przelewy24 / BLIK</td><td><span class="yes">✓</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>InPost / kurierzy</td><td><span class="yes">✓</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Certyfikat SSL</td><td><span class="yes">✓</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Google Analytics 4</td><td><span class="yes">✓</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Podstawowe SEO</td><td><span class="no-val">✕</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Meta Pixel / remarketing</td><td><span class="no-val">✕</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Kody rabatowe</td><td><span class="no-val">✕</span></td><td class="featured"><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Integracja ERP / Baselinker</td><td><span class="no-val">✕</span></td><td class="featured"><span class="no-val">✕</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Program lojalnościowy</td><td><span class="no-val">✕</span></td><td class="featured"><span class="no-val">✕</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Google Shopping</td><td><span class="no-val">✕</span></td><td class="featured"><span class="no-val">✕</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Automatyczne faktury</td><td><span class="no-val">✕</span></td><td class="featured"><span class="no-val">✕</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Dedykowany opiekun</td><td><span class="no-val">✕</span></td><td class="featured"><span class="no-val">✕</span></td><td><span class="yes">✓</span></td></tr>
+          <tr class="price-row">
+            <td>Cena</td>
+            <td>od 1 490 zł</td>
+            <td class="featured">3 990 zł</td>
+            <td>od 8 990 zł</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section>
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="sec-label" style="text-align:center">Jak pracujemy</div>
+      <div class="sec-title" style="text-align:center">Od briefu do gotowego sklepu</div>
+      <p class="sec-sub" style="margin:0 auto;text-align:center;color:var(--muted);">Przejrzysty proces — na każdym etapie wiesz co się dzieje.</p>
+    </div>
+    <div class="process-steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Konsultacja</h4>
+        <p>Poznajemy Twój asortyment, branżę i cele sprzedażowe</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Projekt UX/UI</h4>
+        <p>Tworzymy makiety i projekt wizualny sklepu do akceptacji</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Wdrożenie</h4>
+        <p>Kodujemy sklep, konfigurujemy płatności i kurierów</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Dodanie produktów</h4>
+        <p>Pomagamy wprowadzić pierwsze produkty do sklepu</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Uruchomienie</h4>
+        <p>Testy, szkolenie z obsługi i start sprzedaży</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg2);">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania o sklepy</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Na jakiej platformie budujecie sklepy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standardowo budujemy na WooCommerce (WordPress), która jest najpopularniejszą platformą e-commerce na świecie. Jest intuicyjna w obsłudze i ma ogromne możliwości rozbudowy. Dla większych projektów możemy też pracować na Shoper lub rozwiązaniach dedykowanych — dobieramy platformę do potrzeb klienta.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy pomożecie mi dodać produkty do sklepu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — w pakietach Standard i Premium pomagamy wprowadzić pierwsze produkty. Jeśli masz dużo asortymentu, możemy zaimportować go hurtowo z pliku CSV lub Excela. Szkolimy też z dodawania kolejnych produktów samodzielnie przez panel.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy sklep będzie zgodny z RODO?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak. Każdy sklep dostarcza z niezbędnymi elementami prawnymi: polityka prywatności, regulamin sklepu, zgody marketingowe i mechanizm cookies. Rekomendujemy skonsultowanie ostatecznych dokumentów z prawnikiem, ale startowy pakiet dokumentów jest w cenie.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy mogę sprzedawać też na Allegro lub innych platformach?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — w pakiecie Premium integrujemy sklep z Baselinker, który pozwala zarządzać sprzedażą na Allegro, Amazon, OLX i własnym sklepie z jednego panelu. Zamówienia, stany magazynowe i etykiety wysyłkowe — wszystko w jednym miejscu.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile trwa realizacja sklepu internetowego?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Sklep Starter realizujemy w 7–10 dni roboczych. Sklep Standard zajmuje zazwyczaj 2–4 tygodnie od akceptacji projektu graficznego. Sklep Premium z pełnymi integracjami to 4–8 tygodni. Termin zależy też od szybkości dostarczenia materiałów i akceptacji projektu z Twojej strony.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background:var(--bg);padding:100px 0;">
+  <div class="cta-orb"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2>Zacznij sprzedawać online</h2>
+      <p>Bezpłatna konsultacja — omówimy Twój asortyment i dobierzemy pakiet.</p>
+      <a href="index.html#kontakt" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="index.html">Strona główna</a>
+        <a href="projektowanie-stron.html">Strony WWW</a>
+        <a href="#">Polityka prywatności</a>
+        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixiart — profesjonalne strony www, identyfikacja wizualna i grafika dla firm. Nowoczesny design, który sprzedaje Twoje usługi.">
+  <title>Pixiart — Design, który sprzedaje</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="images/sygnet.png" alt="Pixiart Logo">
+    </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="#oferta">Strony WWW</a></li>
+          <li><a href="#sklepy">Sklepy Online</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#komunikacja">Grafika + Druk</a></li>
+          <li><a href="#opinie">Opinie</a></li>
+          <li><a href="#faq">Najczęstsze pytania</a></li>
+          <li><a href="#wsparcie">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk</a></li>
+        </ul>
+      </li>
+      <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <div style="padding:20px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:10px;">
+    <small style="color:var(--blue);text-transform:uppercase;letter-spacing:1px;">Menu</small>
+  </div>
+  <a href="strony.html" class="mob-link">Strony WWW</a>
+  <a href="sklepy.html" class="mob-link">Sklepy Online</a>
+  <a href="identyfikacja.html" class="mob-link">Grafika + Druk</a>
+  <a href="realizacje.html" class="mob-link">Realizacje</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <div style="margin-top:20px;padding:0 20px;">
+    <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<main>
+<section class="hero hero--home">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container">
+    <div class="hero__inner">
+      <div>
+        <h1>Twój biznes zasługuje na profesjonalny design</h1>
+        <p class="hero__sub">Od nowoczesnych stron www po spójną identyfikację wizualną.<br>Tworzymy narzędzia, które sprzedają Twoje usługi.</p>
+        <div class="hero__actions">
+          <a href="#oferta" class="btn-primary">Sprawdź pakiety →</a>
+          <a href="kontakt.html" class="btn-ghost">Skontaktuj się z Nami</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-num"><span>Realne</span></div>
+            <div class="hero__stat-label">WSPARCIE BIZNESU</div>
+          </div>
+          <div>
+            <div class="hero__stat-num"><span>Nowoczesna</span></div>
+            <div class="hero__stat-label">ARCHITEKTURA IT</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual" id="canvas-container"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<div class="logos-bar">
+  <div class="logos-track">
+    <span>RESTAURACJE</span><span>·</span>
+    <span>SALONY PIĘKNOŚCI</span><span>·</span>
+    <span>KANCELARIE PRAWNE</span><span>·</span>
+    <span>STARTUPY</span><span>·</span>
+    <span>E-COMMERCE</span><span>·</span>
+    <span>GABINETY MEDYCZNE</span><span>·</span>
+    <span>ARCHITEKCI</span><span>·</span>
+    <span>AGENCJE</span><span>·</span>
+    <span>RESTAURACJE</span><span>·</span>
+    <span>SALONY PIĘKNOŚCI</span><span>·</span>
+    <span>KANCELARIE PRAWNE</span><span>·</span>
+    <span>STARTUPY</span><span>·</span>
+    <span>E-COMMERCE</span><span>·</span>
+    <span>GABINETY MEDYCZNE</span><span>·</span>
+    <span>ARCHITEKCI</span><span>·</span>
+    <span>AGENCJE</span><span>·</span>
+  </div>
+</div>
+
+<!-- PAKIETY WWW -->
+<section class="light" id="oferta">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety</div>
+      <div class="sec-title">Strona WWW + Wizytówki</div>
+      <p class="sec-sub">Wybierz pakiet dopasowany do Twojej skali i budżetu.</p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Abonament</h3>
+        <p class="muted">Szablon + Opieka</p>
+        <div class="price">od 89 zł <span style="font-size:14px;font-weight:400;color:#888">/ msc</span></div>
+        <ul>
+          <li>Strona na profesjonalnym szablonie</li>
+          <li>Hosting i opieka techniczna</li>
+          <li>Projekt wizytówek (2 wersje / 3 poprawki)</li>
+          <li>Wsparcie mailowe</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJLEPSZA OFERTA</div>
+        <div class="card-icon">✦</div>
+        <h3>Zestaw Standard</h3>
+        <p class="muted">Strona Premium + Wizytówki</p>
+        <div class="price">
+          <span class="old">2 999 zł</span>
+          1 990 zł
+        </div>
+        <ul>
+          <li>Wdrożenie strony Premium</li>
+          <li>Optymalizacja SEO pod Google</li>
+          <li><strong>Projekt wizytówek GRATIS</strong></li>
+          <li>2 wersje / 3 poprawki</li>
+          <li>Certyfikat SSL + analityka</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>Indywidualna</h3>
+        <p class="muted">Projekt od zera</p>
+        <div class="price">od 9 990 zł</div>
+        <ul>
+          <li>Unikalny projekt UX/UI</li>
+          <li>Strategia i branding</li>
+          <li>Wizytówki Premium</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKLEPY INTERNETOWE -->
+<section class="light" id="sklepy">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Sklepy internetowe</div>
+      <div class="sec-title">Sprzedawaj online — bez kompromisów</div>
+      <p class="sec-sub">Sklepy zbudowane na sprawdzonych platformach, gotowe do sprzedaży od pierwszego dnia.</p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>Sklep Starter</h3>
+        <p class="muted">Gotowy szablon + konfiguracja</p>
+        <div class="price">od 1 490 zł</div>
+        <ul>
+          <li>Sklep na sprawdzonym szablonie</li>
+          <li>Do 50 produktów</li>
+          <li>Płatności online (Przelewy24 / Stripe)</li>
+          <li>Integracja z InPost / kurierami</li>
+          <li>Certyfikat SSL</li>
+          <li class="no">własny projekt graficzny</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+        <div class="card-icon">🏪</div>
+        <h3>Sklep Standard</h3>
+        <p class="muted">Projekt Premium + pełna konfiguracja</p>
+        <div class="price">
+          <span class="old">5 990 zł</span>
+          3 990 zł
+        </div>
+        <ul>
+          <li>Unikalny projekt graficzny sklepu</li>
+          <li>Nielimitowana liczba produktów</li>
+          <li>Płatności online (Przelewy24 / Stripe / BLIK)</li>
+          <li>Integracja z InPost, DPD, kurierami</li>
+          <li>Certyfikat SSL + analityka Google</li>
+          <li><strong>Podstawowe SEO sklepu GRATIS</strong></li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA KAMPANIĘ META</div>
+        <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Sklep Premium</h3>
+        <p class="muted">Zaawansowany e-commerce od zera</p>
+        <div class="price">od 8 990 zł</div>
+        <ul>
+          <li>Dedykowany projekt UX/UI</li>
+          <li>Zaawansowane filtry i wyszukiwarka</li>
+          <li>Program lojalnościowy / kody rabatowe</li>
+          <li>Integracja z systemem ERP / Baselinker</li>
+          <li>Pełne SEO + audyt prędkości</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Realizacje</div>
+      <div class="sec-title">Nasze ostatnie projekty</div>
+      <p class="sec-sub" style="color:var(--muted)">Każdy projekt to indywidualne podejście i dbałość o każdy detal.</p>
+    </div>
+    <div class="portfolio-grid reveal">
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Kancelaria Adwokacka">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Strona WWW</div>
+          <h4>Kancelaria Adwokacka</h4>
+          <p>Landing page + system rezerwacji</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Salon Kosmetyczny">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">E-commerce</div>
+          <h4>Salon Kosmetyczny</h4>
+          <p>Sklep online + identyfikacja wizualna</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Restauracja">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Branding</div>
+          <h4>Restauracja</h4>
+          <p>Identyfikacja wizualna 360°</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRAFIKA -->
+<section class="light" id="komunikacja">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety graficzne</div>
+      <div class="sec-title">Komunikacja wizualna</div>
+      <p class="sec-sub">Materiały graficzne, które przyciągają wzrok i budują markę.</p>
+    </div>
+    <div class="grafika-cards reveal">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Zestaw Cyfrowy</h3>
+        <p class="muted">Online & Social Media</p>
+        <div class="price">950 zł</div>
+        <ul>
+          <li>Grafiki social media (FB / IG / LinkedIn)</li>
+          <li>Banery reklamowe online</li>
+          <li>Stopka e-mail</li>
+          <li>Spójność wizualna marki</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖨️</div>
+        <h3>Zestaw DTP</h3>
+        <p class="muted">Materiały drukowane</p>
+        <div class="price">1 850 zł</div>
+        <ul>
+          <li>Ulotka reklamowa</li>
+          <li>Plakat (A3 / A4 / A5)</li>
+          <li>Voucher (3 warianty kwotowe)</li>
+          <li>Przygotowanie do druku (CMYK + spady)</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">💎 POLECAMY</div>
+        <div class="card-icon">🔁</div>
+        <h3>Zestaw Mieszany</h3>
+        <p class="muted">Online + Druk</p>
+        <div class="price">2 490 zł</div>
+        <ul>
+          <li>Grafiki online + materiały drukowane</li>
+          <li>Ulotka + plakat + voucher</li>
+          <li>Spójna identyfikacja wizualna</li>
+          <li>Pełny pack marketingowy</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn card-btn--primary">Zamów →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRAFIKA -->
+<section class="portfolio" id="portfolio-grafika">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Realizacje graficzne</div>
+      <div class="sec-title">Ostatnie projekty graficzne</div>
+      <p class="sec-sub" style="color:var(--muted)">Social media, materiały drukowane i identyfikacja wizualna dla naszych klientów.</p>
+    </div>
+    <div class="portfolio-grid reveal">
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Social Media Salon Beauty">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Social Media</div>
+          <h4>Zestaw Cyfrowy — Salon Beauty</h4>
+          <p>FB / IG / LinkedIn + stopka e-mail</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=600&q=80" alt="DTP Restauracja">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">DTP / Druk</div>
+          <h4>Zestaw DTP — Restauracja</h4>
+          <p>Ulotka A5 + voucher + plakat</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img class="portfolio-img" src="https://images.unsplash.com/photo-1634084462412-b54873c0a56d?w=600&q=80" alt="Identyfikacja Wizualna">
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Branding</div>
+          <h4>Identyfikacja wizualna — Gabinet</h4>
+          <p>Logo + kolory + wizytówki + social media</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section class="reviews" id="opinie">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Opinie klientów</div>
+      <div class="sec-title">Co mówią o nas klienci?</div>
+      <p class="sec-sub" style="color:var(--muted)">Poznaj opinie firm, które zdecydowały się na współpracę z Pixiart.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Strona, którą stworzyli dla mojej kancelarii, przeszła moje oczekiwania. Profesjonalizm, szybkość i świetny kontakt na każdym etapie projektu."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#9d26ff,#0ec1f8)">MK</div>
+          <div>
+            <div class="reviewer-name">Marcin Kowalski</div>
+            <div class="reviewer-role">Adwokat, Kancelaria Kowalski</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Zamawiałam identyfikację wizualną i jestem zachwycona. Wizytówki, ulotki, social media — wszystko spójne i piękne. Polecam każdej firmie!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f43f8e,#f97316)">AN</div>
+          <div>
+            <div class="reviewer-name">Anna Nowak</div>
+            <div class="reviewer-role">Właścicielka, Salon Piękności Ania</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Bardzo szybka realizacja i efekty powyżej oczekiwań. Strona wygląda świetnie zarówno na komputerze jak i telefonie. Zdecydowanie wrócę z kolejnym projektem."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#0ec1f8,#22c55e)">PW</div>
+          <div>
+            <div class="reviewer-name">Piotr Wiśniewski</div>
+            <div class="reviewer-role">CEO, TechStart Sp. z o.o.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O MARCE — bento logo card -->
+<section style="padding:100px 0;background:var(--bg);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;align-items:center;" class="reveal about-grid">
+      <div>
+        <div class="sec-label">O marce</div>
+        <div class="sec-title">Nowoczesne podejście do designu</div>
+        <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;margin-bottom:30px;">
+          Łączymy estetykę z funkcjonalnością. Nasze projekty to nie tylko ładne obrazki — to przemyślane narzędzia biznesowe, które pomagają Ci rosnąć.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__number">Realne</span>
+            <span class="stat__label">Wsparcie biznesu</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" style="color:var(--blue)">Nowoczesna</span>
+            <span class="stat__label">Architektura IT</span>
+          </div>
+        </div>
+      </div>
+      <!-- BENTO LOGO CARD -->
+      <div style="display:flex;justify-content:center;align-items:center;">
+        <div class="bento-logo-card">
+          <img class="about__logo-styl" src="images/logo.png" alt="Pixiart">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Ile czasu trwa realizacja strony internetowej?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Standardowa strona www realizowana jest w ciągu 7–14 dni roboczych od momentu dostarczenia materiałów. Projekty indywidualne wyceniamy i ustalamy harmonogram indywidualnie — zazwyczaj 3–6 tygodni.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Czy mogę samodzielnie edytować stronę po wdrożeniu?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Tak — wszystkie strony dostarczamy z przyjaznym panelem administracyjnym (CMS), który pozwala edytować treści, zdjęcia i ceny bez żadnej wiedzy technicznej. Dodatkowo przeszkolimy Cię z obsługi w ramach projektu.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Co zawiera opieka w abonamencie?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">W ramach abonamentu zapewniamy: hosting i domeny, regularne aktualizacje systemu, kopie zapasowe, certyfikat SSL, wsparcie mailowe i drobne zmiany na stronie (do 1h/msc). Większe modyfikacje wyceniamy oddzielnie.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Czy robicie strony dla małych firm i jednoosobowych działalności?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Oczywiście! Spora część naszych klientów to właśnie JDG i małe firmy. Rozumiemy potrzeby i budżety małych przedsiębiorców — dlatego oferujemy elastyczne pakiety i możliwość rozłożenia płatności na raty.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Jak wygląda proces współpracy?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Zaczynamy od bezpłatnej konsultacji, gdzie poznajemy Twoje potrzeby. Następnie przygotowujemy wycenę i brief. Po akceptacji: projekt graficzny → Twoja akceptacja → wdrożenie → testy → publikacja. Na każdym etapie masz pełny wgląd i możliwość zgłaszania poprawek.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WSPARCIE -->
+<section class="light" id="wsparcie">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Opieka po wdrożeniu</div>
+      <div class="sec-title">Pakiety abonamentowe</div>
+      <p class="sec-sub">Regularna opieka, aktualizacje i rozwój strony w jednym pakiecie miesięcznym.</p>
+    </div>
+    <div class="wsparcie-grid reveal" style="margin-bottom:52px;">
+      <div class="wsparcie-box"><div class="w-icon">🔍</div><div class="w-label">SEO</div></div>
+      <div class="wsparcie-box"><div class="w-icon">🔄</div><div class="w-label">Aktualizacje</div></div>
+      <div class="wsparcie-box"><div class="w-icon">📊</div><div class="w-label">Analityka</div></div>
+      <div class="wsparcie-box"><div class="w-icon">📄</div><div class="w-label">Landingi</div></div>
+      <div class="wsparcie-box"><div class="w-icon">💬</div><div class="w-label">Wsparcie</div></div>
+    </div>
+    <div class="care-cards reveal">
+      <div class="care-card">
+        <div class="care-tag care-tag--basic">BASIC</div>
+        <h3>Opieka Basic</h3>
+        <p class="care-sub">Dla małych stron wizytówkowych</p>
+        <div class="care-price"><sup>od </sup>149 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 do 5 produktów / msc</div>
+          <div class="care-limit">✏️ do 3 zmian treści / msc</div>
+          <div class="care-limit">⏱️ czas reakcji: 48h</div>
+        </div>
+        <ul class="care-list">
+          <li>Hosting + domena w cenie</li>
+          <li>Certyfikat SSL</li>
+          <li>Aktualizacje systemu CMS</li>
+          <li>Kopia zapasowa (1×/tydzień)</li>
+          <li>Raport miesięczny (odwiedziny)</li>
+          <li class="no">Pozycjonowanie SEO</li>
+          <li class="no">Grafiki social media</li>
+          <li class="no">Dedykowany opiekun</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Wybierz Basic</a>
+      </div>
+      <div class="care-card care-card--featured">
+        <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+        <div class="care-tag care-tag--pro">PRO</div>
+        <h3>Opieka Pro</h3>
+        <p class="care-sub">Dla sklepów i aktywnych firm</p>
+        <div class="care-price"><sup>od </sup>349 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 do 20 produktów / msc</div>
+          <div class="care-limit">✏️ do 10 zmian treści / msc</div>
+          <div class="care-limit">⏱️ czas reakcji: 24h</div>
+        </div>
+        <ul class="care-list">
+          <li>Hosting + domena w cenie</li>
+          <li>Certyfikat SSL</li>
+          <li>Aktualizacje systemu CMS</li>
+          <li>Kopia zapasowa (codziennie)</li>
+          <li>Raport miesięczny (pełna analityka)</li>
+          <li>Podstawowe pozycjonowanie SEO</li>
+          <li>2 grafiki social media / msc</li>
+          <li class="no">Dedykowany opiekun</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn card-btn--primary">Wybierz Pro →</a>
+      </div>
+      <div class="care-card">
+        <div class="care-tag care-tag--max">MAX</div>
+        <h3>Opieka Max</h3>
+        <p class="care-sub">Dla rozwijających się e-commerce</p>
+        <div class="care-price"><sup>od </sup>699 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 nielimitowane produkty</div>
+          <div class="care-limit">✏️ nielimitowane zmiany treści</div>
+          <div class="care-limit">⏱️ czas reakcji: 4h</div>
+        </div>
+        <ul class="care-list">
+          <li>Hosting premium + domena</li>
+          <li>Certyfikat SSL + WAF firewall</li>
+          <li>Aktualizacje + monitoring 24/7</li>
+          <li>Kopia zapasowa (real-time)</li>
+          <li>Raport tygodniowy + rekomendacje</li>
+          <li>Aktywne pozycjonowanie SEO</li>
+          <li>4 grafiki social media / msc</li>
+          <li><strong>Dedykowany opiekun projektu</strong></li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Wybierz Max</a>
+      </div>
+    </div>
+    <p class="reveal" style="text-align:center;color:#999;font-size:13px;margin-top:28px">
+      Potrzebujesz więcej produktów lub zmian? <a href="kontakt.html" style="color:#9d26ff;font-weight:600;text-decoration:none">Wycenimy indywidualnie →</a>
+    </p>
+  </div>
+</section>
+
+<!-- PODSUMOWANIE -->
+<section style="background:var(--bg2);padding:100px 0;overflow:hidden;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 64px;">
+      <div class="sec-label" style="display:flex;justify-content:center;">Kompleksowa obsługa</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.8px;color:var(--text);margin-bottom:20px;line-height:1.1;">
+        Wszystko, czego potrzebuje<br>
+        <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Twoja marka</span>
+        — w jednym miejscu
+      </h2>
+      <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;">
+        Nie musisz szukać osobno grafika, webdevelopera i drukarni. U nas dostajesz wszystko spójnie — od pierwszego piksela po gotowy wydruk.
+      </p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:var(--radius);overflow:hidden;">
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.15) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="font-size:40px;margin-bottom:20px;">🎨</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Wyjątkowy webdesign</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Strony i sklepy, które nie wyglądają jak kolejny szablon z internetu. Każdy projekt to indywidualna koncepcja.</p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Strony wizytówkowe i firmowe</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Sklepy internetowe e-commerce</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Landing page i kampanie</div>
+        </div>
+      </div>
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;border-left:1px solid rgba(255,255,255,.06);border-right:1px solid rgba(255,255,255,.06);transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="font-size:40px;margin-bottom:20px;">✦</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Spójna komunikacja wizualna</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Logotyp, kolory, typografia, social media, stopka e-mail — wszystko zaprojektowane jako jeden spójny system.</p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Identyfikacja wizualna i branding</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Grafiki social media (FB / IG / LinkedIn)</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Banery reklamowe i stopki e-mail</div>
+        </div>
+      </div>
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="font-size:40px;margin-bottom:20px;">🖨️</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Druk najwyższej jakości</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Projekt, który wygląda świetnie na ekranie, musi też robić wrażenie w dłoniach klienta. CMYK, spady, 300 dpi.</p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Wizytówki, ulotki, plakaty</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Vouchery i materiały promocyjne</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Przygotowanie do druku (CMYK + spady)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta" id="kontakt">
+  <div class="footer-cta-orb"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2>Gotowy na nową jakość<br>swojej marki?</h2>
+      <p>Skonsultuj się z nami bezpłatnie — bez zobowiązań.</p>
+      <a href="mailto:hello@pixiart.pl" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="#">Polityka prywatności</a>
+        <a href="#">Regulamin</a>
+        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<style>
+@media(max-width:960px){
+  .about-grid{grid-template-columns:1fr!important;gap:40px!important;text-align:center;}
+}
+</style>
+<script src="main.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

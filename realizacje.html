@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Realizacje — Pixiart. Zobacz nasze projekty stron internetowych, sklepów e-commerce oraz identyfikacji wizualnych dla firm z różnych branż.">
+  <title>Realizacje — Pixiart</title>
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+        <a href="#" class="logo">
+            <img src="images/sygnet.png" alt="Pixiart Logo">
+        </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="index.html#wsparcie">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk </a></li>
+        </ul>
+      </li>
+
+     <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
+    <small style="color: var(--blue); text-transform: uppercase; letter-spacing: 1px;">Menu</small>
+  </div>
+  
+  <a href="strony.html" class="mob-link">Strony WWW</a>
+  <a href="sklepy.html" class="mob-link">Sklepy Online</a>
+  <a href="identyfikacja.html" class="mob-link">Grafika + Druk</a>
+  <a href="realizacje.html" class="mob-link">Realizacje</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  
+  <div style="margin-top: 20px; padding: 0 20px;">
+    <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Strona główna</a>
+      <span>/</span>
+      <strong>Realizacje</strong>
+    </div>
+    <div class="hero__label">Portfolio</div>
+    <h1>Projekty, z których jesteśmy dumni</h1>
+    <p class="hero__sub">Strony internetowe, sklepy e-commerce, identyfikacje wizualne i materiały drukowane — każdy projekt to indywidualne podejście i dbałość o każdy detal.</p>
+    <div class="hero__actions">
+      <a href="index.html#kontakt" class="btn-primary">Zamów bezpłatną konsultację →</a>
+      <a href="#projekty" class="btn-ghost">Zobacz projekty</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJEKTY -->
+<section id="projekty" style="padding-top: 0;">
+  <div class="container">
+
+    <!-- FILTRY -->
+    <div class="filters-bar reveal">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">Wszystkie</button>
+      <button class="filter-btn" onclick="filterProjects('www', this)">Strony WWW</button>
+      <button class="filter-btn" onclick="filterProjects('sklep', this)">Sklepy</button>
+      <button class="filter-btn" onclick="filterProjects('branding', this)">Branding</button>
+      <button class="filter-btn" onclick="filterProjects('druk', this)">Grafika + druk</button>
+    </div>
+
+    <div class="projects-grid reveal" id="projects-grid">
+
+      <!-- 1 - Kancelaria (szeroka) -->
+      <div class="project-card project-card--wide" data-cat="www">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#1a0533,#0a1a2e)">
+            <div class="pm-header" style="background:rgba(255,255,255,.05)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+              <div class="pm-dot" style="background:#28c840"></div>
+            </div>
+            <div class="pm-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <div style="width:80px;height:12px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:4px"></div>
+                <div style="display:flex;gap:8px">
+                  <div style="width:50px;height:8px;background:rgba(255,255,255,.15);border-radius:3px"></div>
+                  <div style="width:50px;height:8px;background:rgba(255,255,255,.15);border-radius:3px"></div>
+                  <div style="width:50px;height:8px;background:rgba(255,255,255,.15);border-radius:3px"></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center">
+                <div>
+                  <div style="height:14px;width:90%;background:rgba(255,255,255,.6);border-radius:4px;margin-bottom:8px"></div>
+                  <div style="height:14px;width:70%;background:rgba(255,255,255,.4);border-radius:4px;margin-bottom:14px"></div>
+                  <div style="height:9px;width:95%;background:rgba(255,255,255,.2);border-radius:3px;margin-bottom:5px"></div>
+                  <div style="height:9px;width:80%;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:16px"></div>
+                  <div style="width:110px;height:32px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:7px"></div>
+                </div>
+                <div style="height:140px;background:linear-gradient(135deg,rgba(157,38,255,.3),rgba(14,193,248,.2));border-radius:12px;display:flex;align-items:center;justify-content:center">
+                  <div style="width:60px;height:60px;border-radius:14px;background:var(--grad);opacity:.7"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Strona WWW</div>
+          <h3>Kancelaria Adwokacka — Landing Page</h3>
+          <p>Nowoczesna strona wizytówkowa z systemem rezerwacji online. Projekt Premium z pełnym SEO i integracją kalendarza.</p>
+          <div class="project-meta">
+            <span>WordPress + CMS</span>
+            <span>SEO</span>
+            <span>Rezerwacje online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 - Salon kosmetyczny (szeroka) -->
+      <div class="project-card" data-cat="sklep">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#fff9f0,#fff0f5)">
+            <div class="pm-header" style="background:rgba(0,0,0,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <div style="width:50px;height:12px;background:#c8496a;border-radius:4px"></div>
+                <div style="width:26px;height:22px;background:linear-gradient(135deg,#c8496a,#e07090);border-radius:5px"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div style="height:80px;background:linear-gradient(135deg,#fce4ec,#f8bbd0);border-radius:8px"></div>
+                <div>
+                  <div style="height:10px;width:90%;background:#c8496a;border-radius:3px;margin-bottom:6px"></div>
+                  <div style="height:8px;width:80%;background:#d4a0a8;border-radius:3px;margin-bottom:4px"></div>
+                  <div style="height:8px;width:60%;background:#d4a0a8;border-radius:3px;margin-bottom:12px"></div>
+                  <div style="height:24px;width:70px;background:#c8496a;border-radius:5px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">E-commerce</div>
+          <h3>Salon Kosmetyczny — Sklep online</h3>
+          <p>Sklep z zabiegami i kosmetykami. WooCommerce, płatności BLIK, integracja z InPost.</p>
+          <div class="project-meta">
+            <span>WooCommerce</span>
+            <span>Przelewy24</span>
+            <span>InPost</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 - Restauracja branding -->
+      <div class="project-card" data-cat="branding">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#0a2010,#0f2d0f)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body" style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#22c55e,#16a34a);flex-shrink:0"></div>
+                <div>
+                  <div style="height:10px;width:80px;background:#fff;border-radius:3px;margin-bottom:5px"></div>
+                  <div style="height:7px;width:55px;background:rgba(255,255,255,.35);border-radius:3px"></div>
+                </div>
+              </div>
+              <div style="display:flex;gap:6px">
+                <div style="flex:1;height:28px;border-radius:6px;background:#22c55e"></div>
+                <div style="flex:1;height:28px;border-radius:6px;background:#16a34a"></div>
+                <div style="flex:1;height:28px;border-radius:6px;background:#0a2010"></div>
+                <div style="flex:1;height:28px;border-radius:6px;background:#f0fdf4;border:1px solid rgba(34,197,94,.3)"></div>
+              </div>
+              <div style="display:flex;gap:8px">
+                <div style="flex:2;height:40px;background:linear-gradient(135deg,#0a2010,#1a3a1a);border-radius:6px;border:1px solid rgba(34,197,94,.3)"></div>
+                <div style="flex:3;height:40px;background:#fff;border-radius:6px"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Branding</div>
+          <h3>Restauracja — Identyfikacja wizualna 360°</h3>
+          <p>Logo, paleta kolorów, wizytówki, menu i materiały social media w spójnym systemie.</p>
+          <div class="project-meta">
+            <span>Logo</span>
+            <span>Brand book</span>
+            <span>Social media</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 - Social media grafika -->
+      <div class="project-card" data-cat="druk">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#1a0030,#0a0520)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start">
+              <div style="aspect-ratio:1;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:8px;display:flex;align-items:center;justify-content:center">
+                <div style="width:40%;height:40%;border:2px solid rgba(255,255,255,.6);border-radius:4px"></div>
+              </div>
+              <div style="aspect-ratio:1;background:linear-gradient(135deg,#0ec1f8,#22c55e);border-radius:8px"></div>
+              <div style="aspect-ratio:1;background:linear-gradient(135deg,#f43f8e,#9d26ff);border-radius:8px"></div>
+              <div style="aspect-ratio:1;background:linear-gradient(135deg,#f97316,#f43f8e);border-radius:8px"></div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Social Media</div>
+          <h3>Salon Beauty — Zestaw Cyfrowy</h3>
+          <p>Komplet grafik na FB, IG i LinkedIn. Stopka e-mail, okładka i zdjęcie profilowe.</p>
+          <div class="project-meta">
+            <span>FB / IG / LinkedIn</span>
+            <span>Stopka e-mail</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 - DTP ulotka -->
+      <div class="project-card" data-cat="druk">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#fff8f0,#fff0e0)">
+            <div class="pm-header" style="background:rgba(0,0,0,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body" style="display:flex;gap:10px;align-items:flex-start">
+              <div style="flex:1;background:#fff;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12);overflow:hidden">
+                <div style="height:70px;background:linear-gradient(135deg,#c8492a,#e07020)"></div>
+                <div style="padding:8px">
+                  <div style="height:8px;width:80%;background:#222;border-radius:3px;margin-bottom:4px"></div>
+                  <div style="height:6px;width:60%;background:#bbb;border-radius:3px;margin-bottom:8px"></div>
+                  <div style="height:20px;width:55%;background:#c8492a;border-radius:4px"></div>
+                </div>
+              </div>
+              <div style="flex:1;background:#fff;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12);overflow:hidden;margin-top:16px">
+                <div style="height:50px;background:linear-gradient(135deg,#1a1a2e,#2d2d5e)"></div>
+                <div style="padding:8px">
+                  <div style="height:7px;width:70%;background:#333;border-radius:3px;margin-bottom:4px"></div>
+                  <div style="height:5px;width:50%;background:#bbb;border-radius:3px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">DTP / Druk</div>
+          <h3>Restauracja — Zestaw DTP</h3>
+          <p>Ulotka A5 dwustronna, voucher w 3 wariantach kwotowych i plakat A3. Gotowe pliki CMYK.</p>
+          <div class="project-meta">
+            <span>Ulotka A5</span>
+            <span>Plakat A3</span>
+            <span>Voucher</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 - Sklep premium -->
+      <div class="project-card" data-cat="sklep">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#0a0a1e,#141428)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <div style="width:55px;height:9px;background:rgba(255,255,255,.5);border-radius:3px"></div>
+                <div style="display:flex;gap:6px">
+                  <div style="width:30px;height:7px;background:rgba(255,255,255,.2);border-radius:3px"></div>
+                  <div style="width:24px;height:22px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:5px"></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+                <div style="background:linear-gradient(135deg,rgba(157,38,255,.2),rgba(14,193,248,.1));border-radius:7px;padding:8px">
+                  <div style="height:48px;border-radius:5px;background:linear-gradient(135deg,rgba(157,38,255,.4),rgba(14,193,248,.3));margin-bottom:6px"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.3);border-radius:3px;margin-bottom:3px"></div>
+                  <div style="height:6px;width:60%;background:rgba(157,38,255,.6);border-radius:3px"></div>
+                </div>
+                <div style="background:linear-gradient(135deg,rgba(157,38,255,.2),rgba(14,193,248,.1));border-radius:7px;padding:8px">
+                  <div style="height:48px;border-radius:5px;background:linear-gradient(135deg,rgba(14,193,248,.3),rgba(34,197,94,.2));margin-bottom:6px"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.3);border-radius:3px;margin-bottom:3px"></div>
+                  <div style="height:6px;width:70%;background:rgba(14,193,248,.6);border-radius:3px"></div>
+                </div>
+                <div style="background:linear-gradient(135deg,rgba(157,38,255,.2),rgba(14,193,248,.1));border-radius:7px;padding:8px">
+                  <div style="height:48px;border-radius:5px;background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(244,63,142,.2));margin-bottom:6px"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.3);border-radius:3px;margin-bottom:3px"></div>
+                  <div style="height:6px;width:55%;background:rgba(249,115,22,.6);border-radius:3px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Sklep Premium</div>
+          <h3>Butik odzieżowy — Sklep Premium</h3>
+          <p>Dedykowany projekt UX/UI, zaawansowane filtry, integracja z Baselinker i Google Shopping.</p>
+          <div class="project-meta">
+            <span>UX/UI</span>
+            <span>Baselinker</span>
+            <span>Google Shopping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 - Strona firmowa -->
+      <div class="project-card" data-cat="www">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#0c1824,#162030)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <div style="width:60px;height:10px;background:#0ec1f8;border-radius:4px;opacity:.8"></div>
+                <div style="display:flex;gap:6px">
+                  <div style="width:35px;height:7px;background:rgba(14,193,248,.3);border-radius:3px"></div>
+                  <div style="width:35px;height:7px;background:rgba(14,193,248,.3);border-radius:3px"></div>
+                  <div style="width:35px;height:7px;background:rgba(14,193,248,.3);border-radius:3px"></div>
+                </div>
+              </div>
+              <div style="height:80px;background:linear-gradient(135deg,rgba(14,193,248,.15),rgba(34,197,94,.1));border-radius:10px;margin-bottom:10px;display:flex;align-items:center;padding:12px;gap:12px">
+                <div style="flex:1">
+                  <div style="height:9px;width:85%;background:rgba(255,255,255,.5);border-radius:3px;margin-bottom:5px"></div>
+                  <div style="height:7px;width:65%;background:rgba(255,255,255,.25);border-radius:3px"></div>
+                </div>
+                <div style="width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,#0ec1f8,#22c55e);flex-shrink:0"></div>
+              </div>
+              <div style="display:flex;gap:8px">
+                <div style="flex:1;height:32px;background:rgba(14,193,248,.1);border-radius:6px;border:1px solid rgba(14,193,248,.2)"></div>
+                <div style="flex:1;height:32px;background:rgba(14,193,248,.1);border-radius:6px;border:1px solid rgba(14,193,248,.2)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Strona WWW</div>
+          <h3>Gabinet Fizjoterapii — Strona Premium</h3>
+          <p>Strona firmowa z systemem zapisów online, certyfikatem SSL i pełną optymalizacją SEO.</p>
+          <div class="project-meta">
+            <span>WordPress</span>
+            <span>SEO</span>
+            <span>Rezerwacje</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 - Brand identity -->
+      <div class="project-card" data-cat="branding">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#1a0818,#2d0a28)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body" style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#f43f8e,#9d26ff);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;color:#fff;font-size:18px">B</div>
+                <div>
+                  <div style="height:10px;width:70px;background:rgba(255,255,255,.6);border-radius:3px;margin-bottom:5px"></div>
+                  <div style="height:7px;width:100px;background:rgba(255,255,255,.2);border-radius:3px"></div>
+                </div>
+              </div>
+              <div style="display:flex;gap:6px">
+                <div style="flex:1;height:26px;border-radius:6px;background:linear-gradient(135deg,#f43f8e,#9d26ff)"></div>
+                <div style="flex:1;height:26px;border-radius:6px;background:#9d26ff"></div>
+                <div style="flex:1;height:26px;border-radius:6px;background:#1a0818"></div>
+                <div style="flex:1;height:26px;border-radius:6px;background:#fff0f8"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+                <div style="aspect-ratio:1;background:linear-gradient(135deg,rgba(244,63,142,.3),rgba(157,38,255,.3));border-radius:7px"></div>
+                <div style="aspect-ratio:1;background:linear-gradient(135deg,rgba(157,38,255,.25),rgba(244,63,142,.2));border-radius:7px"></div>
+                <div style="aspect-ratio:1;background:linear-gradient(135deg,rgba(244,63,142,.2),rgba(249,115,22,.2));border-radius:7px"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Brand Identity</div>
+          <h3>Studio Fotograficzne — Brand Identity</h3>
+          <p>Logo, paleta kolorów, typografia, wizytówki i komplet szablonów social media z brand bookiem.</p>
+          <div class="project-meta">
+            <span>Logo</span>
+            <span>Wizytówki</span>
+            <span>Brand book</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 - Landing page -->
+      <div class="project-card" data-cat="www">
+        <div class="project-thumb">
+          <div class="project-mock" style="background:linear-gradient(135deg,#080e1c,#0d1a30)">
+            <div class="pm-header" style="background:rgba(255,255,255,.04)">
+              <div class="pm-dot" style="background:#ff5f57"></div>
+              <div class="pm-dot" style="background:#febc2e"></div>
+            </div>
+            <div class="pm-body">
+              <div style="text-align:center;padding:10px 0">
+                <div style="height:12px;width:70%;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:4px;margin:0 auto 8px"></div>
+                <div style="height:8px;width:85%;background:rgba(255,255,255,.2);border-radius:3px;margin:0 auto 4px"></div>
+                <div style="height:8px;width:65%;background:rgba(255,255,255,.15);border-radius:3px;margin:0 auto 14px"></div>
+                <div style="width:90px;height:28px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:6px;margin:0 auto 12px"></div>
+              </div>
+              <div style="display:flex;gap:8px">
+                <div style="flex:1;height:44px;background:var(--surface);border-radius:8px;border:1px solid rgba(255,255,255,.08)"></div>
+                <div style="flex:1;height:44px;background:var(--surface);border-radius:8px;border:1px solid rgba(255,255,255,.08)"></div>
+                <div style="flex:1;height:44px;background:var(--surface);border-radius:8px;border:1px solid rgba(255,255,255,.08)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="index.html#kontakt" class="overlay-btn">Zamów podobny projekt</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Landing Page</div>
+          <h3>Startup SaaS — Landing Page</h3>
+          <p>Konwersyjna strona produktowa z formularzem zbierania leadów i integracją z CRM.</p>
+          <div class="project-meta">
+            <span>Konwersja</span>
+            <span>CRM</span>
+            <span>Lead generation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STATYSTYKI -->
+    <div class="stats-row reveal">
+      <div class="stat-box">
+        <span class="stat-num">3</span>
+        <div class="stat-label">Typy usług</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">7+</span>
+        <div class="stat-label">Branż obsługiwanych</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">100%</span>
+        <div class="stat-label">Projektów na czas</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">∞</span>
+        <div class="stat-label">Możliwości współpracy</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRANŻE -->
+<section class="branches">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Branże</div>
+      <div class="sec-title">Z kim pracujemy</div>
+      <p class="sec-sub" style="color:var(--muted)">Nasze projekty trafiają do firm z różnych sektorów — każdemu podchodzimy indywidualnie.</p>
+    </div>
+    <div class="branches-grid reveal">
+      <div class="branch-item">
+        <div class="branch-icon">⚖️</div>
+        <h4>Kancelarie prawne</h4>
+        <p>Strony budujące zaufanie i profesjonalny wizerunek</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">💅</div>
+        <h4>Salony beauty</h4>
+        <p>E-commerce, rezerwacje i identyfikacja wizualna</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">🍽️</div>
+        <h4>Restauracje</h4>
+        <p>Strony z menu, rezerwacje online i branding 360°</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">🏥</div>
+        <h4>Gabinety medyczne</h4>
+        <p>Strony z systemem zapisów i SEO lokalnym</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">🚀</div>
+        <h4>Startupy</h4>
+        <p>Landing page, lead generation i identity od zera</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">🛒</div>
+        <h4>E-commerce</h4>
+        <p>Sklepy z pełną integracją płatności i logistyki</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">🏗️</div>
+        <h4>Architektura / budownictwo</h4>
+        <p>Portfolio, realizacje i strony firmowe</p>
+      </div>
+      <div class="branch-item">
+        <div class="branch-icon">📸</div>
+        <h4>Fotografowie / artyści</h4>
+        <p>Portfolio, sklep z printami i identyfikacja</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Opinie klientów</div>
+      <div class="sec-title">Co mówią o nas klienci?</div>
+      <p class="sec-sub" style="color:var(--muted)">Poznaj opinie firm, które zdecydowały się na współpracę z Pixiart.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Strona, którą stworzyli dla mojej kancelarii, przeszła moje oczekiwania. Profesjonalizm, szybkość i świetny kontakt na każdym etapie projektu."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#9d26ff,#0ec1f8)">MK</div>
+          <div>
+            <div class="reviewer-name">Marcin Kowalski</div>
+            <div class="reviewer-role">Adwokat, Kancelaria Kowalski</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Zamawiałam identyfikację wizualną i jestem zachwycona. Wizytówki, ulotki, social media — wszystko spójne i piękne. Polecam każdej firmie!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f43f8e,#f97316)">AN</div>
+          <div>
+            <div class="reviewer-name">Anna Nowak</div>
+            <div class="reviewer-role">Właścicielka, Salon Piękności Ania</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Bardzo szybka realizacja i efekty powyżej oczekiwań. Strona wygląda świetnie zarówno na komputerze jak i telefonie. Zdecydowanie wrócę z kolejnym projektem."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#0ec1f8,#22c55e)">PW</div>
+          <div>
+            <div class="reviewer-name">Piotr Wiśniewski</div>
+            <div class="reviewer-role">CEO, TechStart Sp. z o.o.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg2);padding:100px 0;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:-1px;margin-bottom:14px;">Twój projekt może być następny</h2>
+      <p style="color:var(--muted);font-size:18px;margin-bottom:36px;font-weight:300;">Bezpłatna konsultacja — opowiedz nam o swoim biznesie.</p>
+      <a href="index.html#kontakt" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="index.html">Strona główna</a>
+        <a href="strony.html">Strony WWW</a>
+        <a href="sklepy.html">Sklepy</a>
+        <a href="identyfikacja.html">Grafika + Druk</a>
+        <a href="#">Polityka prywatności</a>
+        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

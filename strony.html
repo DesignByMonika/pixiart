@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projektowanie stron internetowych — Pixiart. Nowoczesne strony www i sklepy internetowe dla firm. Sprawdź nasze pakiety i zamów bezpłatną konsultację.">
+  <title>Projektowanie stron www — Pixiart</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+        <a href="#" class="logo">
+            <img src="images/sygnet.png" alt="Pixiart Logo">
+        </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="index.html#wsparcie">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk </a></li>
+        </ul>
+      </li>
+
+     <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
+    <small style="color: var(--blue); text-transform: uppercase; letter-spacing: 1px;">Menu</small>
+  </div>
+  
+  <a href="strony.html" class="mob-link">Strony WWW</a>
+  <a href="sklepy.html" class="mob-link">Sklepy Online</a>
+  <a href="identyfikacja.html" class="mob-link">Grafika + Druk</a>
+  <a href="realizacje.html" class="mob-link">Realizacje</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  
+  <div style="margin-top: 20px; padding: 0 20px;">
+    <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
+  </div>
+</div>
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Strona główna</a>
+      <span>/</span>
+      <strong>Projektowanie stron www</strong>
+    </div>
+    <div class="hero__inner">
+      <div>
+        <div class="hero__label">Strony internetowe</div>
+        <h1>Strony www, które pracują na Twój biznes</h1>
+        <p class="hero__sub">Projektujemy nowoczesne strony internetowe dopasowane do Twojej branży i klientów. Nie kolejny szablon — prawdziwy projekt, który buduje zaufanie i generuje zapytania.</p>
+        <div class="hero__actions">
+          <a href="index.html#kontakt" class="btn-primary">Zamów bezpłatną konsultację →</a>
+          <a href="#pakiety" class="btn-ghost">Zobacz pakiety</a>
+        </div>
+      </div>
+
+      <div class="hero__screens">
+        <!-- desktop mockup -->
+        <div class="screen screen-main">
+          <div class="screen-bar">
+            <div class="s-dot" style="background:#ff5f57"></div>
+            <div class="s-dot" style="background:#febc2e"></div>
+            <div class="s-dot" style="background:#28c840"></div>
+          </div>
+          <div class="screen-body">
+            <div class="sb-nav">
+              <div class="sb-logo"></div>
+              <div class="sb-links">
+                <div class="sb-link"></div>
+                <div class="sb-link"></div>
+                <div class="sb-link"></div>
+              </div>
+            </div>
+            <div class="sb-hero">
+              <div>
+                <div class="sb-title" style="width:90%"></div>
+                <div class="sb-title" style="width:70%"></div>
+                <div class="sb-sub"></div>
+                <div class="sb-sub" style="width:80%"></div>
+                <div class="sb-btn"></div>
+              </div>
+              <div class="sb-img"></div>
+            </div>
+            <div class="sb-cards">
+              <div class="sb-card"></div>
+              <div class="sb-card"></div>
+              <div class="sb-card"></div>
+            </div>
+          </div>
+        </div>
+        <!-- mobile mockup -->
+        <div class="screen screen-side">
+          <div class="screen-bar">
+            <div class="s-dot" style="background:#ff5f57"></div>
+            <div class="s-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="sm-body">
+            <div class="sm-img"></div>
+            <div class="sm-title"></div>
+            <div class="sm-sub"></div>
+            <div class="sm-sub" style="width:65%"></div>
+            <div class="sm-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section style="background:var(--bg2);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
+      <div class="sec-label" style="text-align:center">Jak pracujemy</div>
+      <div class="sec-title" style="text-align:center">Od pomysłu do gotowej strony</div>
+      <p class="sec-sub" style="margin:0 auto;text-align:center;">Prosty, przejrzysty proces — wiesz co dzieje się na każdym etapie.</p>
+    </div>
+    <div class="process-steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Konsultacja</h4>
+        <p>Bezpłatna rozmowa, poznajemy Twoje cele i branżę</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Brief & wycena</h4>
+        <p>Ustalamy zakres, termin i szczegóły projektu</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Projekt graficzny</h4>
+        <p>Tworzymy makiety i projekt wizualny do akceptacji</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Wdrożenie</h4>
+        <p>Kodujemy i uruchamiamy stronę na serwerze</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Przekazanie</h4>
+        <p>Szkolenie z obsługi i stała opieka po wdrożeniu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CO ZAWIERA -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Standard jakości</div>
+      <div class="sec-title">Co zawiera każda strona</div>
+      <p class="sec-sub">Bez ukrytych kosztów — poniższe elementy są standardem w każdym naszym projekcie.</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h4>Responsywność (RWD)</h4>
+        <p>Strona wygląda perfekcyjnie na każdym urządzeniu — telefonie, tablecie i komputerze. Ponad 60% ruchu w sieci pochodzi dziś z mobile.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>Szybkość ładowania</h4>
+        <p>Optymalizujemy obrazy, kod i hosting tak, żeby strona ładowała się błyskawicznie. Szybkość bezpośrednio wpływa na pozycję w Google.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h4>Podstawowe SEO</h4>
+        <p>Poprawna struktura nagłówków, meta tagi, sitemap i robots.txt — fundament pod dobre pozycjonowanie w wyszukiwarkach.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h4>Certyfikat SSL</h4>
+        <p>Każda strona jest zabezpieczona certyfikatem SSL (kłódka przy adresie). Obowiązkowy standard, który buduje zaufanie klientów.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛠️</div>
+        <h4>Panel CMS</h4>
+        <p>Możesz samodzielnie edytować treści, zdjęcia i ceny bez wiedzy technicznej. Szkolimy Cię z obsługi w ramach projektu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h4>Google Analytics</h4>
+        <p>Integrujemy analitykę, żebyś wiedział ilu masz odwiedzających, skąd przychodzą i które podstrony działają najlepiej.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKIETY -->
+<section class="light" id="pakiety">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety</div>
+      <div class="sec-title">Wybierz pakiet dla siebie</div>
+      <p class="sec-sub">Elastyczne opcje dopasowane do różnych potrzeb i budżetów.</p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Abonament</h3>
+        <p class="muted">Szablon + Opieka</p>
+        <div class="price">od 89 zł <span style="font-size:14px;font-weight:400;color:#888">/ msc</span></div>
+        <ul>
+          <li>Strona na profesjonalnym szablonie</li>
+          <li>Hosting i opieka techniczna</li>
+          <li>Projekt wizytówek (2 wersje / 3 poprawki)</li>
+          <li>Wsparcie mailowe</li>
+          <li>Certyfikat SSL</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="index.html#kontakt" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJLEPSZA OFERTA</div>
+        <div class="card-icon">✦</div>
+        <h3>Zestaw Standard</h3>
+        <p class="muted">Strona Premium + Wizytówki</p>
+        <div class="price">
+          <span class="old">2 999 zł</span>
+          1 990 zł
+        </div>
+        <ul>
+          <li>Wdrożenie strony Premium</li>
+          <li>Optymalizacja SEO pod Google</li>
+          <li><strong>Projekt wizytówek GRATIS</strong></li>
+          <li>2 wersje / 3 poprawki</li>
+          <li>Certyfikat SSL + analityka</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="index.html#kontakt" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>Indywidualna</h3>
+        <p class="muted">Projekt od zera</p>
+        <div class="price">od 9 990 zł</div>
+        <ul>
+          <li>Unikalny projekt UX/UI</li>
+          <li>Strategia i branding</li>
+          <li>Wizytówki Premium</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="index.html#kontakt" class="card-btn">Zamów</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIE -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Stack technologiczny</div>
+      <div class="sec-title">Na czym budujemy</div>
+      <p class="sec-sub" style="color:var(--muted)">Sprawdzone technologie, które gwarantują szybkość, bezpieczeństwo i łatwość obsługi.</p>
+    </div>
+    <div class="tech-grid reveal">
+      <div class="tech-card">
+        <div class="tech-icon">⚡</div>
+        <h4>WordPress</h4>
+        <p>Najpopularniejszy CMS świata — intuicyjny panel i ogromne możliwości rozbudowy</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🛒</div>
+        <h4>WooCommerce</h4>
+        <p>Sprawdzona platforma e-commerce zintegrowana z WordPressem</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🎨</div>
+        <h4>Figma</h4>
+        <p>Projekty graficzne i makiety, które możesz przeglądać i komentować online</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🚀</div>
+        <h4>Hosting SSD</h4>
+        <p>Serwery NVMe SSD z automatycznymi kopiami zapasowymi i CDN</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg2);">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile kosztuje strona internetowa?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Cena zależy od zakresu projektu. Strona abonamentowa na szablonie zaczyna się od 89 zł/msc. Strona Premium to wydatek jednorazowy od 1 990 zł. Projekt indywidualny od zera wyceniamy indywidualnie — zazwyczaj od 9 990 zł. Wszystkie ceny są przejrzyste, bez ukrytych kosztów.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jak długo trwa realizacja?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standardowa strona www realizowana jest w ciągu 7–14 dni roboczych od momentu dostarczenia przez Ciebie materiałów (teksty, zdjęcia, logo). Projekty indywidualne trwają zazwyczaj 3–6 tygodni.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy potrzebuję mieć przygotowane teksty i zdjęcia?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Jeśli masz własne materiały — świetnie, wykorzystamy je. Jeśli nie — pomożemy. Możemy użyć wysokiej jakości zdjęć stockowych oraz zaproponować szkielet treści. Copywriting wyceniamy oddzielnie, jeśli potrzebujesz pisania od zera.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy strona będzie dobrze wyglądać na telefonie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — responsywność (RWD) to nasz absolutny standard. Każda strona jest projektowana i testowana na telefonach, tabletach i komputerach. Dziś ponad 60% użytkowników przegląda strony na mobile, więc to nie opcja — to konieczność.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Co jeśli będę chciał zmienić coś na stronie po wdrożeniu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Drobne zmiany (teksty, zdjęcia, ceny) możesz wprowadzać samodzielnie przez panel CMS — szkolimy Cię z obsługi. Większe modyfikacje wyceniamy godzinowo lub możesz wykupić jeden z naszych pakietów opieki, który zawiera miesięczny limit zmian.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-orb"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2>Zacznijmy Twój projekt</h2>
+      <p>Bezpłatna konsultacja — bez zobowiązań, bez wciskania.</p>
+      <a href="index.html#kontakt" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="index.html">Strona główna</a>
+        <a href="#">Polityka prywatności</a>
+        <a href="#">Regulamin</a>
+        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+
+</body>
+</html>

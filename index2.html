@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixiart — profesjonalne strony www, identyfikacja wizualna i grafika dla firm. Nowoczesny design, który sprzedaje Twoje usługi.">
+  <title>Pixiart — Design, który sprzedaje</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080e1c;
+      --bg2: #0d1526;
+      --surface: #111d35;
+      --text: #f0f2f8;
+      --muted: #8893aa;
+      --faint: #1e2d4a;
+      --accent: #9d26ff;
+      --blue: #0ec1f8;
+      --grad: linear-gradient(135deg, #9d26ff 0%, #0ec1f8 100%);
+      --grad-soft: linear-gradient(135deg, rgba(157,38,255,.15) 0%, rgba(14,193,248,.15) 100%);
+      --radius: 18px;
+      --radius-sm: 10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
+ 
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+ 
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(8,14,28,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: box-shadow .3s;
+    }
+    .nav.scrolled { box-shadow: 0 8px 40px rgba(0,0,0,.4); }
+    .nav__inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 72px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--grad);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: #fff;
+    }
+    .logo-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -.3px; }
+    .nav__menu { display: flex; align-items: center; gap: 8px; list-style: none; }
+    .nav__menu a {
+      color: var(--muted); text-decoration: none; font-weight: 400; font-size: 14px;
+      padding: 6px 14px; border-radius: 6px; transition: .2s;
+    }
+    .nav__menu a:hover { color: var(--text); background: rgba(255,255,255,.06); }
+    .nav__cta {
+      padding: 9px 20px !important; background: var(--grad) !important;
+      border-radius: 8px !important; color: #fff !important; font-weight: 600 !important;
+      letter-spacing: .3px; transition: opacity .2s !important;
+    }
+    .nav__cta:hover { opacity: .88; background: var(--grad) !important; }
+ 
+    /* hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; display: block; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ 
+    .mobile-menu {
+      display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+      background: rgba(8,14,28,.97); backdrop-filter: blur(20px);
+      z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text); text-decoration: none; font-family: 'Syne', sans-serif;
+      font-size: 28px; font-weight: 700; padding: 12px 30px; border-radius: 10px;
+      transition: .2s; width: 260px; text-align: center;
+    }
+    .mobile-menu a:hover { background: var(--faint); }
+    .mobile-menu .mob-cta {
+      margin-top: 16px; background: var(--grad) !important; color: #fff;
+      font-size: 16px !important; padding: 14px 40px !important;
+    }
+ 
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 120px 0 80px; position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .25;
+    }
+    .hero-orb-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; right: -100px; }
+    .hero-orb-2 { width: 400px; height: 400px; background: var(--blue); bottom: -100px; left: -100px; }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; }
+    .hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .hero__label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad-soft); border: 1px solid rgba(157,38,255,.3);
+      padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;
+      color: var(--blue); letter-spacing: .5px; margin-bottom: 24px;
+      animation: fadeUp .6s ease both;
+    }
+    .hero__label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    h1 {
+      font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -1.5px;
+      animation: fadeUp .7s .1s ease both;
+    }
+    .hero__sub {
+      color: var(--muted); margin-top: 20px; font-size: 18px; max-width: 460px; font-weight: 300;
+      animation: fadeUp .7s .2s ease both;
+    }
+    .hero__actions { display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: fadeUp .7s .3s ease both; }
+    .btn-primary {
+      padding: 15px 28px; background: var(--grad);
+      color: #fff; text-decoration: none; border-radius: 10px;
+      font-weight: 600; font-size: 15px; letter-spacing: .3px; transition: .25s;
+      box-shadow: 0 0 30px rgba(157,38,255,.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 50px rgba(157,38,255,.5); }
+    .btn-ghost {
+      padding: 15px 28px; border: 1px solid rgba(255,255,255,.15);
+      color: var(--text); text-decoration: none; border-radius: 10px;
+      font-weight: 500; font-size: 15px; transition: .25s; background: transparent;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.05); }
+    .hero__stats {
+      display: flex; gap: 32px; margin-top: 48px;
+      animation: fadeUp .7s .4s ease both; flex-wrap: wrap;
+    }
+    .hero__stat-num { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; }
+    .hero__stat-num span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero__stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .hero__visual { position: relative; animation: fadeUp .8s .15s ease both; }
+    .hero__mockup {
+      width: 100%; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    }
+    .mockup-bar { background: var(--surface); padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+    .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .mockup-screen { background: #fff; height: 280px; position: relative; overflow: hidden; }
+    .mockup-screen-inner { padding: 24px; }
+    .ms-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .ms-logo-bar { width: 70px; height: 10px; background: #1a1a2e; border-radius: 5px; }
+    .ms-links { display: flex; gap: 10px; }
+    .ms-link { width: 40px; height: 8px; background: #e5e7eb; border-radius: 4px; }
+    .ms-hero-block { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+    .ms-title { width: 90%; height: 14px; background: #1a1a2e; border-radius: 4px; margin-bottom: 8px; }
+    .ms-title2 { width: 70%; height: 14px; background: #1a1a2e; border-radius: 4px; margin-bottom: 16px; }
+    .ms-sub { width: 100%; height: 8px; background: #e5e7eb; border-radius: 4px; margin-bottom: 6px; }
+    .ms-cta-btn { width: 90px; height: 28px; border-radius: 6px; background: linear-gradient(135deg,#9d26ff,#0ec1f8); margin-top: 10px; }
+    .ms-img { width: 100%; height: 120px; background: linear-gradient(135deg,#f3e8ff,#e0f2fe); border-radius: 8px; }
+    .ms-cards { display: flex; gap: 10px; margin-top: 20px; }
+    .ms-card { flex: 1; height: 60px; background: #f9fafb; border-radius: 8px; border: 1px solid #e5e7eb; }
+    .hero__badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--grad); padding: 14px 18px; border-radius: 14px;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px;
+      box-shadow: 0 10px 30px rgba(157,38,255,.4); color: #fff; text-align: center;
+    }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(24px); } to { opacity:1; transform: translateY(0); } }
+ 
+    /* ─── LOGOS BAR ─── */
+    .logos-bar { padding: 32px 0; border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); overflow: hidden; }
+    .logos-track { display: flex; gap: 48px; align-items: center; animation: marquee 22s linear infinite; width: max-content; }
+    .logos-track span { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: rgba(255,255,255,.2); white-space: nowrap; letter-spacing: 1px; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+ 
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 0; }
+    .sec-label { font-size: 12px; letter-spacing: 2px; font-weight: 600; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; }
+    .sec-title { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; letter-spacing: -.5px; margin-bottom: 16px; }
+    .sec-sub { color: var(--muted); font-size: 17px; font-weight: 300; max-width: 520px; }
+ 
+    /* ─── PAKIETY ─── */
+    .light { background: #f4f5f8; color: #111; }
+    .light .sec-label { color: #7c3aed; }
+    .light .sec-sub { color: #666; }
+    .cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
+    .card {
+      background: #fff; border-radius: var(--radius);
+      padding: 36px 30px; display: flex; flex-direction: column;
+      border: 1.5px solid #e8eaef; transition: .3s; position: relative;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.1); }
+    .card--featured {
+      border: 2px solid #9d26ff;
+      box-shadow: 0 0 0 4px rgba(157,38,255,.08);
+    }
+    .card--featured:hover { box-shadow: 0 20px 50px rgba(157,38,255,.2); }
+    .badge-top {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg,#9d26ff,#0ec1f8);
+      color: #fff; padding: 5px 18px; border-radius: 20px;
+      font-size: 11px; font-weight: 700; letter-spacing: .5px; white-space: nowrap;
+    }
+    .card-icon { font-size: 32px; margin-bottom: 14px; }
+    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .card .muted { color: #888; font-size: 14px; margin-bottom: 20px; }
+    .card .price { font-size: 28px; font-weight: 800; margin: 16px 0; color: #111; }
+    .card .price .old { text-decoration: line-through; color: #bbb; font-size: 16px; font-weight: 400; display: block; }
+    .card ul { list-style: none; flex-grow: 1; margin: 16px 0; }
+    .card ul li { font-size: 14px; color: #555; padding: 5px 0 5px 24px; position: relative; border-bottom: 1px solid #f0f0f0; }
+    .card ul li::before { content: '✓'; position: absolute; left: 0; color: #9d26ff; font-weight: 700; }
+    .exchange { background: #f5f0ff; border: 1px dashed #9d26ff; color: #7c3aed; font-size: 11px; padding: 8px 12px; border-radius: 8px; margin: 12px 0; font-weight: 600; }
+    .card-btn {
+      margin-top: 20px; padding: 13px; border-radius: 10px;
+      text-align: center; text-decoration: none; font-weight: 600; font-size: 14px;
+      border: 1.5px solid #e0e0e0; color: #333; transition: .2s; display: block;
+    }
+    .card-btn:hover { border-color: #9d26ff; color: #9d26ff; }
+    .card-btn--primary { background: linear-gradient(135deg,#9d26ff,#0ec1f8); color: #fff !important; border: none !important; }
+    .card-btn--primary:hover { opacity: .9; }
+ 
+    /* ─── PORTFOLIO ─── */
+    .portfolio { background: var(--bg2); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 52px; }
+    .portfolio-item {
+      border-radius: var(--radius); overflow: hidden; position: relative;
+      cursor: pointer; aspect-ratio: 4/3;
+      border: 1px solid rgba(255,255,255,.08); transition: .3s;
+    }
+    .portfolio-item:hover { transform: scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .portfolio-mock {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+    }
+    .pm-header { height: 36px; display: flex; align-items: center; padding: 0 14px; gap: 6px; }
+    .pm-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .pm-body { flex: 1; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+    .pm-row { border-radius: 4px; }
+    .portfolio-overlay {
+      position: absolute; inset: 0; background: rgba(8,14,28,.85);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 24px; opacity: 0; transition: .3s;
+    }
+    .portfolio-overlay h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .portfolio-overlay p { font-size: 13px; color: var(--muted); }
+    .portfolio-tag {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-size: 11px; font-weight: 600; margin-bottom: 8px;
+      background: var(--grad-soft); color: var(--blue); border: 1px solid rgba(14,193,248,.3);
+    }
+ 
+    /* ─── OPINIE ─── */
+    .reviews { background: var(--bg); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
+    .review-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); padding: 30px; transition: .3s;
+    }
+    .review-card:hover { border-color: rgba(157,38,255,.3); transform: translateY(-4px); }
+    .stars { color: #f59e0b; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-text { color: var(--muted); font-size: 15px; line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+    .reviewer { display: flex; align-items: center; gap: 12px; }
+    .reviewer-avatar {
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: #fff;
+    }
+    .reviewer-name { font-weight: 600; font-size: 14px; }
+    .reviewer-role { font-size: 12px; color: var(--muted); margin-top: 2px; }
+ 
+    /* ─── GRAFIKA ─── */
+    .grafika-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
+ 
+    /* ─── FAQ ─── */
+    .faq { background: var(--bg2); }
+    .faq-list { margin-top: 52px; max-width: 720px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .faq-q {
+      width: 100%; background: none; border: none; color: var(--text);
+      font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 600;
+      text-align: left; padding: 20px 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .faq-q:hover { color: var(--blue); }
+    .faq-icon { flex-shrink: 0; font-size: 20px; transition: .3s; color: var(--muted); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+    .faq-a-inner { padding-bottom: 20px; color: var(--muted); font-size: 15px; line-height: 1.7; font-weight: 300; }
+ 
+    /* ─── WSPARCIE ─── */
+    .care-intro { display: flex; gap: 16px; flex-wrap: wrap; margin: 0 0 52px; }
+    .care-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: #fff; border: 1.5px solid #e8eaef; border-radius: 30px;
+      padding: 8px 18px; font-size: 13px; font-weight: 500; color: #555;
+    }
+    .care-pill span { font-size: 16px; }
+    .care-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .care-card {
+      background: #fff; border-radius: var(--radius); border: 1.5px solid #e8eaef;
+      padding: 36px 30px; display: flex; flex-direction: column; transition: .3s; position: relative;
+    }
+    .care-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.1); }
+    .care-card--featured { border: 2px solid #9d26ff; box-shadow: 0 0 0 4px rgba(157,38,255,.08); }
+    .care-card--featured:hover { box-shadow: 0 20px 50px rgba(157,38,255,.2); }
+    .care-tag {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      font-size: 11px; font-weight: 700; letter-spacing: .5px; margin-bottom: 16px; width: fit-content;
+    }
+    .care-tag--basic { background: #f0f4ff; color: #4f6ef7; }
+    .care-tag--pro   { background: #f5f0ff; color: #7c3aed; }
+    .care-tag--max   { background: linear-gradient(135deg,#9d26ff,#0ec1f8); color: #fff; }
+    .care-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+    .care-card .care-sub { font-size: 14px; color: #888; margin-bottom: 20px; }
+    .care-price { font-size: 32px; font-weight: 800; color: #111; margin: 4px 0 20px; }
+    .care-price sup { font-size: 16px; font-weight: 600; vertical-align: super; }
+    .care-price sub { font-size: 14px; font-weight: 400; color: #888; }
+    .care-divider { height: 1px; background: #f0f0f0; margin: 8px 0 16px; }
+    .care-section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #bbb; text-transform: uppercase; margin: 14px 0 8px; }
+    .care-list { list-style: none; flex-grow: 1; margin-bottom: 24px; }
+    .care-list li { font-size: 14px; color: #555; padding: 5px 0 5px 24px; position: relative; border-bottom: 1px solid #f5f5f5; }
+    .care-list li::before { content: '✓'; position: absolute; left: 0; color: #9d26ff; font-weight: 700; }
+    .care-list li.no::before { content: '✕'; color: #ddd; }
+    .care-list li.no { color: #bbb; }
+    .care-limit { display: inline-flex; align-items: center; gap: 6px; background: #f5f0ff; border: 1px solid rgba(157,38,255,.2); border-radius: 8px; padding: 6px 12px; font-size: 12px; font-weight: 600; color: #7c3aed; margin-bottom: 6px; }
+    .care-limits { display: flex; flex-direction: column; gap: 6px; margin: 12px 0 20px; }
+ 
+    /* ─── CTA FOOTER ─── */
+    .footer-cta {
+      background: var(--bg); padding: 100px 0; text-align: center;
+      border-top: 1px solid rgba(255,255,255,.06); position: relative; overflow: hidden;
+    }
+    .footer-cta-orb {
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(157,38,255,.15) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .footer-cta h2 { font-size: clamp(28px,4vw,52px); letter-spacing: -1px; margin-bottom: 14px; }
+    .footer-cta p { color: var(--muted); font-size: 18px; margin-bottom: 36px; font-weight: 300; }
+ 
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg2); padding: 48px 0 32px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .footer-copy { color: var(--muted); font-size: 13px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: .2s; }
+    .footer-links a:hover { color: var(--text); }
+ 
+    /* ─── SCROLL REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+ 
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:960px) {
+      .hero__inner { grid-template-columns: 1fr; text-align: center; gap: 48px; }
+      .hero__sub { margin: 20px auto 0; }
+      .hero__actions { justify-content: center; }
+      .hero__stats { justify-content: center; }
+      .hero__visual { display: none; }
+      .nav__menu { display: none; }
+      .hamburger { display: flex; }
+      .cards-grid, .portfolio-grid, .reviews-grid, .grafika-cards { grid-template-columns: 1fr; }
+      .wsparcie-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .about-grid { grid-template-columns: 1fr !important; text-align: center; gap: 40px !important; }
+      .care-cards { grid-template-columns: 1fr !important; }
+    }
+    @media(max-width:600px) {
+      section { padding: 70px 0; }
+      .wsparcie-grid { grid-template-columns: 1fr 1fr; }
+      .summary-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">P</div>
+      <span class="logo-name">Pixiart</span>
+    </a>
+    <ul class="nav__menu">
+      <li><a href="#oferta">Strony WWW</a></li>
+      <li><a href="#sklepy">Sklepy</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#komunikacja">Grafika</a></li>
+      <li><a href="#opinie">Opinie</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="nav__cta">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#oferta" class="mob-link">Strony WWW</a>
+  <a href="#sklepy" class="mob-link">Sklepy</a>
+  <a href="#portfolio" class="mob-link">Portfolio</a>
+  <a href="#komunikacja" class="mob-link">Grafika</a>
+  <a href="#opinie" class="mob-link">Opinie</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <a href="#kontakt" class="mob-cta">KONTAKT →</a>
+</div>
+ 
+<!-- HERO -->
+<main>
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container">
+    <div class="hero__inner">
+      <div>
+        <div class="hero__label">Agencja kreatywna · Warszawa</div>
+        <h1>Twój biznes zasługuje na design, który sprzedaje</h1>
+        <p class="hero__sub">Od nowoczesnych stron www po spójną identyfikację wizualną. Tworzymy narzędzia, które realnie rozwijają Twój biznes.</p>
+        <div class="hero__actions">
+          <a href="#oferta" class="btn-primary">Sprawdź pakiety →</a>
+          <a href="#portfolio" class="btn-ghost">Zobacz realizacje</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-num"><span>Design</span></div>
+            <div class="hero__stat-label">który naprawdę sprzedaje</div>
+          </div>
+          <div>
+            <div class="hero__stat-num"><span>Szybko</span></div>
+            <div class="hero__stat-label">i bez zbędnych formalności</div>
+          </div>
+          <div>
+            <div class="hero__stat-num"><span>Lokalnie</span></div>
+            <div class="hero__stat-label">Warszawa i cała Polska</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dot" style="background:#ff5f57"></div>
+            <div class="mockup-dot" style="background:#febc2e"></div>
+            <div class="mockup-dot" style="background:#28c840"></div>
+          </div>
+          <div class="mockup-screen">
+            <div class="mockup-screen-inner">
+              <div class="ms-nav">
+                <div class="ms-logo-bar"></div>
+                <div class="ms-links">
+                  <div class="ms-link"></div>
+                  <div class="ms-link"></div>
+                  <div class="ms-link"></div>
+                </div>
+              </div>
+              <div class="ms-hero-block">
+                <div>
+                  <div class="ms-title"></div>
+                  <div class="ms-title2"></div>
+                  <div class="ms-sub"></div>
+                  <div class="ms-sub" style="width:80%"></div>
+                  <div class="ms-cta-btn"></div>
+                </div>
+                <div class="ms-img"></div>
+              </div>
+              <div class="ms-cards">
+                <div class="ms-card"></div>
+                <div class="ms-card"></div>
+                <div class="ms-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__badge">
+          ✦ Premium<br>Design
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- LOGOS -->
+<div class="logos-bar">
+  <div class="logos-track">
+    <span>RESTAURACJE</span><span>·</span>
+    <span>SALONY PIĘKNOŚCI</span><span>·</span>
+    <span>KANCELARIE PRAWNE</span><span>·</span>
+    <span>STARTUPY</span><span>·</span>
+    <span>E-COMMERCE</span><span>·</span>
+    <span>GABINETY MEDYCZNE</span><span>·</span>
+    <span>ARCHITEKT</span><span>·</span>
+    <span>AGENCJE</span><span>·</span>
+    <span>RESTAURACJE</span><span>·</span>
+    <span>SALONY PIĘKNOŚCI</span><span>·</span>
+    <span>KANCELARIE PRAWNE</span><span>·</span>
+    <span>STARTUPY</span><span>·</span>
+    <span>E-COMMERCE</span><span>·</span>
+    <span>GABINETY MEDYCZNE</span><span>·</span>
+    <span>ARCHITEKT</span><span>·</span>
+    <span>AGENCJE</span><span>·</span>
+  </div>
+</div>
+ 
+<!-- PAKIETY WWW -->
+<section class="light" id="oferta">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety</div>
+      <div class="sec-title">Strona WWW + Wizytówki</div>
+      <p class="sec-sub">Wybierz pakiet dopasowany do Twojej skali i budżetu.</p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Abonament</h3>
+        <p class="muted">Szablon + Opieka</p>
+        <div class="price">od 89 zł <span style="font-size:14px;font-weight:400;color:#888">/ msc</span></div>
+        <ul>
+          <li>Strona na profesjonalnym szablonie</li>
+          <li>Hosting i opieka techniczna</li>
+          <li>Projekt wizytówek (2 wersje / 3 poprawki)</li>
+          <li>Wsparcie mailowe</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJLEPSZA OFERTA</div>
+        <div class="card-icon">✦</div>
+        <h3>Zestaw Standard</h3>
+        <p class="muted">Strona Premium + Wizytówki</p>
+        <div class="price">
+          <span class="old">2 999 zł</span>
+          1 990 zł
+        </div>
+        <ul>
+          <li>Wdrożenie strony Premium</li>
+          <li>Optymalizacja SEO pod Google</li>
+          <li><strong>Projekt wizytówek GRATIS</strong></li>
+          <li>2 wersje / 3 poprawki</li>
+          <li>Certyfikat SSL + analityka</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="#kontakt" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>Indywidualna</h3>
+        <p class="muted">Projekt od zera</p>
+        <div class="price">od 9 990 zł</div>
+        <ul>
+          <li>Unikalny projekt UX/UI</li>
+          <li>Strategia i branding</li>
+          <li>Wizytówki Premium</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- SKLEPY INTERNETOWE -->
+<section class="light" id="sklepy">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Sklepy internetowe</div>
+      <div class="sec-title">Sprzedawaj online — bez kompromisów</div>
+      <p class="sec-sub">Sklepy zbudowane na sprawdzonych platformach, gotowe do sprzedaży od pierwszego dnia.</p>
+    </div>
+    <div class="cards-grid reveal">
+ 
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>Sklep Starter</h3>
+        <p class="muted">Gotowy szablon + konfiguracja</p>
+        <div class="price">od 1 490 zł</div>
+        <ul>
+          <li>Sklep na sprawdzonym szablonie</li>
+          <li>Do 50 produktów</li>
+          <li>Płatności online (Przelewy24 / Stripe)</li>
+          <li>Integracja z InPost / kurierami</li>
+          <li>Certyfikat SSL</li>
+          <li class="no" style="color:#bbb;list-style:none">— własny projekt graficzny</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+ 
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+        <div class="card-icon">🏪</div>
+        <h3>Sklep Standard</h3>
+        <p class="muted">Projekt Premium + pełna konfiguracja</p>
+        <div class="price">
+          <span class="old">5 990 zł</span>
+          3 990 zł
+        </div>
+        <ul>
+          <li>Unikalny projekt graficzny sklepu</li>
+          <li>Nielimitowana liczba produktów</li>
+          <li>Płatności online (Przelewy24 / Stripe / BLIK)</li>
+          <li>Integracja z InPost, DPD, kurierami</li>
+          <li>Certyfikat SSL + analityka Google</li>
+          <li><strong>Podstawowe SEO sklepu GRATIS</strong></li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA KAMPANIĘ META</div>
+        <a href="#kontakt" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+ 
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Sklep Premium</h3>
+        <p class="muted">Zaawansowany e-commerce od zera</p>
+        <div class="price">od 8 990 zł</div>
+        <ul>
+          <li>Dedykowany projekt UX/UI</li>
+          <li>Zaawansowane filtry i wyszukiwarka</li>
+          <li>Program lojalnościowy / kody rabatowe</li>
+          <li>Integracja z systemem ERP / Baselinker</li>
+          <li>Pełne SEO + audyt prędkości</li>
+          <li>Dedykowany opiekun projektu</li>
+        </ul>
+        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Realizacje</div>
+      <div class="sec-title">Nasze ostatnie projekty</div>
+      <p class="sec-sub" style="color:var(--muted)">Każdy projekt to indywidualne podejście i dbałość o każdy detal.</p>
+    </div>
+    <div class="portfolio-grid reveal">
+ 
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#1a0533,#0a1a2e)">
+          <div class="pm-header" style="background:rgba(255,255,255,.05)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div class="pm-row" style="height:16px;width:60%;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:4px"></div>
+            <div class="pm-row" style="height:10px;width:85%;background:rgba(255,255,255,.15);border-radius:3px;margin-top:4px"></div>
+            <div class="pm-row" style="height:10px;width:70%;background:rgba(255,255,255,.1);border-radius:3px"></div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <div style="flex:1;height:70px;background:rgba(157,38,255,.2);border-radius:8px;border:1px solid rgba(157,38,255,.3)"></div>
+              <div style="flex:1;height:70px;background:rgba(14,193,248,.1);border-radius:8px;border:1px solid rgba(14,193,248,.2)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Strona WWW</div>
+          <h4>Kancelaria Adwokacka</h4>
+          <p>Landing page + system rezerwacji</p>
+        </div>
+      </div>
+ 
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#fff9f0,#fff0f5)">
+          <div class="pm-header" style="background:rgba(0,0,0,.04)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+              <div style="width:50px;height:12px;background:#c8496a;border-radius:4px"></div>
+              <div style="display:flex;gap:6px">
+                <div style="width:30px;height:8px;background:#e0c0c8;border-radius:3px"></div>
+                <div style="width:30px;height:8px;background:#e0c0c8;border-radius:3px"></div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div style="height:80px;background:linear-gradient(135deg,#fce4ec,#f8bbd0);border-radius:8px"></div>
+              <div>
+                <div style="height:10px;width:90%;background:#c8496a;border-radius:3px;margin-bottom:6px"></div>
+                <div style="height:8px;width:80%;background:#d4a0a8;border-radius:3px;margin-bottom:4px"></div>
+                <div style="height:8px;width:60%;background:#d4a0a8;border-radius:3px;margin-bottom:12px"></div>
+                <div style="height:24px;width:70px;background:#c8496a;border-radius:5px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">E-commerce</div>
+          <h4>Salon Kosmetyczny</h4>
+          <p>Sklep online + identyfikacja wizualna</p>
+        </div>
+      </div>
+ 
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#0a2010,#0f2d0f)">
+          <div class="pm-header" style="background:rgba(255,255,255,.04)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div style="height:14px;width:55%;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:4px;margin-bottom:8px"></div>
+            <div style="height:8px;width:80%;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:4px"></div>
+            <div style="height:8px;width:65%;background:rgba(255,255,255,.1);border-radius:3px;margin-bottom:14px"></div>
+            <div style="display:flex;gap:8px">
+              <div style="flex:1;height:50px;background:rgba(34,197,94,.15);border-radius:6px;border:1px solid rgba(34,197,94,.3)"></div>
+              <div style="flex:1;height:50px;background:rgba(34,197,94,.1);border-radius:6px;border:1px solid rgba(34,197,94,.2)"></div>
+              <div style="flex:1;height:50px;background:rgba(34,197,94,.08);border-radius:6px;border:1px solid rgba(34,197,94,.15)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Branding</div>
+          <h4>Restauracja</h4>
+          <p>Identyfikacja wizualna 360°</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- GRAFIKA -->
+<section class="light" id="komunikacja">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pakiety graficzne</div>
+      <div class="sec-title">Komunikacja wizualna</div>
+      <p class="sec-sub">Materiały graficzne, które przyciągają wzrok i budują markę.</p>
+    </div>
+    <div class="grafika-cards reveal">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Zestaw Cyfrowy</h3>
+        <p class="muted">Online & Social Media</p>
+        <div class="price">950 zł</div>
+        <ul>
+          <li>Grafiki social media (FB / IG / LinkedIn)</li>
+          <li>Banery reklamowe online</li>
+          <li>Stopka e-mail</li>
+          <li>Spójność wizualna marki</li>
+        </ul>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖨️</div>
+        <h3>Zestaw DTP</h3>
+        <p class="muted">Materiały drukowane</p>
+        <div class="price">1 850 zł</div>
+        <ul>
+          <li>Ulotka reklamowa</li>
+          <li>Plakat (A3 / A4 / A5)</li>
+          <li>Voucher (3 warianty kwotowe)</li>
+          <li>Przygotowanie do druku (CMYK + spady)</li>
+        </ul>
+        <a href="#kontakt" class="card-btn">Zamów</a>
+      </div>
+      <div class="card card--featured">
+        <div class="badge-top">💎 POLECAMY</div>
+        <div class="card-icon">🔁</div>
+        <h3>Zestaw Mieszany</h3>
+        <p class="muted">Online + Druk</p>
+        <div class="price">2 490 zł</div>
+        <ul>
+          <li>Grafiki online + materiały drukowane</li>
+          <li>Ulotka + plakat + voucher</li>
+          <li>Spójna identyfikacja wizualna</li>
+          <li>Pełny pack marketingowy</li>
+        </ul>
+        <a href="#kontakt" class="card-btn card-btn--primary">Zamów →</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PORTFOLIO GRAFIKA -->
+<section class="portfolio" id="portfolio-grafika">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Realizacje graficzne</div>
+      <div class="sec-title">Ostatnie projekty graficzne</div>
+      <p class="sec-sub" style="color:var(--muted)">Social media, materiały drukowane i identyfikacja wizualna dla naszych klientów.</p>
+    </div>
+    <div class="portfolio-grid reveal">
+ 
+      <!-- Social media mockup -->
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#1a0030,#0a0520)">
+          <div class="pm-header" style="background:rgba(255,255,255,.04)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start">
+            <div style="aspect-ratio:1;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:8px;display:flex;align-items:center;justify-content:center">
+              <div style="width:40%;height:40%;border:2px solid rgba(255,255,255,.6);border-radius:4px"></div>
+            </div>
+            <div style="aspect-ratio:1;background:linear-gradient(135deg,#0ec1f8,#22c55e);border-radius:8px"></div>
+            <div style="aspect-ratio:1;background:linear-gradient(135deg,#f43f8e,#9d26ff);border-radius:8px"></div>
+            <div style="aspect-ratio:1;background:linear-gradient(135deg,#f97316,#f43f8e);border-radius:8px;display:flex;align-items:center;justify-content:center">
+              <div style="width:50%;height:8px;background:rgba(255,255,255,.7);border-radius:4px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Social Media</div>
+          <h4>Zestaw Cyfrowy — Salon Beauty</h4>
+          <p>FB / IG / LinkedIn + stopka e-mail</p>
+        </div>
+      </div>
+ 
+      <!-- DTP / ulotka mockup -->
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#fff8f0,#fff0e0)">
+          <div class="pm-header" style="background:rgba(0,0,0,.04)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body" style="display:flex;gap:10px;align-items:flex-start">
+            <!-- ulotka -->
+            <div style="flex:1;background:#fff;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12);overflow:hidden">
+              <div style="height:70px;background:linear-gradient(135deg,#c8492a,#e07020)"></div>
+              <div style="padding:8px">
+                <div style="height:8px;width:80%;background:#222;border-radius:3px;margin-bottom:4px"></div>
+                <div style="height:6px;width:60%;background:#bbb;border-radius:3px;margin-bottom:8px"></div>
+                <div style="height:20px;width:55%;background:#c8492a;border-radius:4px"></div>
+              </div>
+            </div>
+            <!-- voucher -->
+            <div style="flex:1;background:#fff;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12);overflow:hidden;margin-top:16px">
+              <div style="height:50px;background:linear-gradient(135deg,#1a1a2e,#2d2d5e)"></div>
+              <div style="padding:8px">
+                <div style="height:7px;width:70%;background:#333;border-radius:3px;margin-bottom:4px"></div>
+                <div style="height:5px;width:50%;background:#bbb;border-radius:3px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">DTP / Druk</div>
+          <h4>Zestaw DTP — Restauracja</h4>
+          <p>Ulotka A5 + voucher + plakat</p>
+        </div>
+      </div>
+ 
+      <!-- Identyfikacja wizualna mockup -->
+      <div class="portfolio-item">
+        <div class="portfolio-mock" style="background:linear-gradient(135deg,#0c1824,#162030)">
+          <div class="pm-header" style="background:rgba(255,255,255,.04)">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body" style="display:flex;flex-direction:column;gap:10px">
+            <!-- logo area -->
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#0ec1f8,#22c55e);flex-shrink:0"></div>
+              <div>
+                <div style="height:10px;width:80px;background:#fff;border-radius:3px;margin-bottom:5px"></div>
+                <div style="height:7px;width:55px;background:rgba(255,255,255,.35);border-radius:3px"></div>
+              </div>
+            </div>
+            <!-- kolory marki -->
+            <div style="display:flex;gap:6px">
+              <div style="flex:1;height:28px;border-radius:6px;background:#0ec1f8"></div>
+              <div style="flex:1;height:28px;border-radius:6px;background:#22c55e"></div>
+              <div style="flex:1;height:28px;border-radius:6px;background:#0c1824"></div>
+              <div style="flex:1;height:28px;border-radius:6px;background:#f0f2f8"></div>
+            </div>
+            <!-- wizytówki -->
+            <div style="display:flex;gap:8px">
+              <div style="flex:2;height:40px;background:linear-gradient(135deg,#0c1824,#1a2e40);border-radius:6px;border:1px solid rgba(14,193,248,.3)"></div>
+              <div style="flex:3;height:40px;background:#fff;border-radius:6px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-tag">Branding</div>
+          <h4>Identyfikacja wizualna — Gabinet</h4>
+          <p>Logo + kolory + wizytówki + social media</p>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- OPINIE -->
+<section class="reviews" id="opinie">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Opinie klientów</div>
+      <div class="sec-title">Co mówią o nas klienci?</div>
+      <p class="sec-sub" style="color:var(--muted)">Poznaj opinie firm, które zdecydowały się na współpracę z Pixiart.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Strona, którą stworzyli dla mojej kancelarii, przeszła moje oczekiwania. Profesjonalizm, szybkość i świetny kontakt na każdym etapie projektu."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#9d26ff,#0ec1f8)">MK</div>
+          <div>
+            <div class="reviewer-name">Marcin Kowalski</div>
+            <div class="reviewer-role">Adwokat, Kancelaria Kowalski</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Zamawiałam identyfikację wizualną i jestem zachwycona. Wizytówki, ulotki, social media — wszystko spójne i piękne. Polecam każdej firmie!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f43f8e,#f97316)">AN</div>
+          <div>
+            <div class="reviewer-name">Anna Nowak</div>
+            <div class="reviewer-role">Właścicielka, Salon Piękności Ania</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Bardzo szybka realizacja i efekty powyżej oczekiwań. Strona wygląda świetnie zarówno na komputerze jak i telefonie. Zdecydowanie wrócę z kolejnym projektem."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#0ec1f8,#22c55e)">PW</div>
+          <div>
+            <div class="reviewer-name">Piotr Wiśniewski</div>
+            <div class="reviewer-role">CEO, TechStart Sp. z o.o.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- O MARCE -->
+<section style="padding: 100px 0; background: var(--bg);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;align-items:center;" class="reveal about-grid">
+      <div>
+        <div class="sec-label">O marce</div>
+        <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.5px;margin-bottom:20px;color:var(--text)">Nowoczesne podejście do designu</h2>
+        <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;margin-bottom:30px;">
+          Łączymy estetykę z funkcjonalnością. Nasze projekty to nie tylko ładne obrazki — to przemyślane narzędzia biznesowe, które pomagają Ci rosnąć.
+        </p>
+        <div style="display:flex;gap:40px;flex-wrap:wrap;">
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--accent)">Realne</div>
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px">Wsparcie biznesu</div>
+          </div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--blue)">Nowoczesna</div>
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px">Architektura IT</div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;justify-content:center;align-items:center;">
+        <div style="position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.2) 0%,transparent 70%);"></div>
+        <div style="width:180px;height:180px;border-radius:24px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:64px;font-weight:800;color:#fff;animation:floating 6s ease-in-out infinite;position:relative;z-index:2;box-shadow:0 20px 60px rgba(157,38,255,.4);">P</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile czasu trwa realizacja strony internetowej?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standardowa strona www realizowana jest w ciągu 7–14 dni roboczych od momentu dostarczenia materiałów. Projekty indywidualne wyceniamy i ustalamy harmonogram indywidualnie — zazwyczaj 3–6 tygodni.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy mogę samodzielnie edytować stronę po wdrożeniu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — wszystkie strony dostarczamy z przyjaznym panelem administracyjnym (CMS), który pozwala edytować treści, zdjęcia i ceny bez żadnej wiedzy technicznej. Dodatkowo przeszkolimy Cię z obsługi w ramach projektu.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Co zawiera opieka w abonamencie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">W ramach abonamentu zapewniamy: hosting i domeny, regularne aktualizacje systemu, kopie zapasowe, certyfikat SSL, wsparcie mailowe i drobne zmiany na stronie (do 1h/msc). Większe modyfikacje wyceniamy oddzielnie.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy robicie strony dla małych firm i jednoosobowych działalności?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Oczywiście! Spora część naszych klientów to właśnie JDG i małe firmy. Rozumiemy potrzeby i budżety małych przedsiębiorców — dlatego oferujemy elastyczne pakiety i możliwość rozłożenia płatności na raty.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jak wygląda proces współpracy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Zaczynamy od bezpłatnej konsultacji, gdzie poznajemy Twoje potrzeby. Następnie przygotowujemy wycenę i brief. Po akceptacji: projekt graficzny → Twoja akceptacja → wdrożenie → testy → publikacja. Na każdym etapie masz pełny wgląd i możliwość zgłaszania poprawek.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- WSPARCIE -->
+<section class="light" id="wsparcie">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Opieka po wdrożeniu</div>
+      <div class="sec-title">Pakiety abonamentowe</div>
+      <p class="sec-sub">Regularna opieka, aktualizacje i rozwój strony w jednym pakiecie miesięcznym.</p>
+    </div>
+ 
+    <div class="wsparcie-grid reveal" style="margin-bottom: 52px;">
+      <div class="wsparcie-box"><div class="w-icon">🔍</div><div class="w-label">SEO</div></div>
+      <div class="wsparcie-box"><div class="w-icon">🔄</div><div class="w-label">Aktualizacje</div></div>
+      <div class="wsparcie-box"><div class="w-icon">📊</div><div class="w-label">Analityka</div></div>
+      <div class="wsparcie-box"><div class="w-icon">📄</div><div class="w-label">Landingi</div></div>
+      <div class="wsparcie-box"><div class="w-icon">💬</div><div class="w-label">Wsparcie</div></div>
+    </div>
+    <div class="care-cards reveal">
+ 
+      <!-- BASIC -->
+      <div class="care-card">
+        <div class="care-tag care-tag--basic">BASIC</div>
+        <h3>Opieka Basic</h3>
+        <p class="care-sub">Dla małych stron wizytówkowych</p>
+        <div class="care-price"><sup>od </sup>149 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+ 
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 do 5 produktów / msc</div>
+          <div class="care-limit">✏️ do 3 zmian treści / msc</div>
+          <div class="care-limit">⏱️ czas reakcji: 48h</div>
+        </div>
+ 
+        <ul class="care-list">
+          <li>Hosting + domena w cenie</li>
+          <li>Certyfikat SSL</li>
+          <li>Aktualizacje systemu CMS</li>
+          <li>Kopia zapasowa (1×/tydzień)</li>
+          <li>Raport miesięczny (odwiedziny)</li>
+          <li class="no">Pozycjonowanie SEO</li>
+          <li class="no">Grafiki social media</li>
+          <li class="no">Dedykowany opiekun</li>
+        </ul>
+        <a href="#kontakt" class="card-btn">Wybierz Basic</a>
+      </div>
+ 
+      <!-- PRO -->
+      <div class="care-card care-card--featured">
+        <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+        <div class="care-tag care-tag--pro">PRO</div>
+        <h3>Opieka Pro</h3>
+        <p class="care-sub">Dla sklepów i aktywnych firm</p>
+        <div class="care-price"><sup>od </sup>349 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+ 
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 do 20 produktów / msc</div>
+          <div class="care-limit">✏️ do 10 zmian treści / msc</div>
+          <div class="care-limit">⏱️ czas reakcji: 24h</div>
+        </div>
+ 
+        <ul class="care-list">
+          <li>Hosting + domena w cenie</li>
+          <li>Certyfikat SSL</li>
+          <li>Aktualizacje systemu CMS</li>
+          <li>Kopia zapasowa (codziennie)</li>
+          <li>Raport miesięczny (pełna analityka)</li>
+          <li>Podstawowe pozycjonowanie SEO</li>
+          <li>2 grafiki social media / msc</li>
+          <li class="no">Dedykowany opiekun</li>
+        </ul>
+        <a href="#kontakt" class="card-btn card-btn--primary">Wybierz Pro →</a>
+      </div>
+ 
+      <!-- MAX -->
+      <div class="care-card">
+        <div class="care-tag care-tag--max">MAX</div>
+        <h3>Opieka Max</h3>
+        <p class="care-sub">Dla rozwijających się e-commerce</p>
+        <div class="care-price"><sup>od </sup>699 <sub>zł / msc</sub></div>
+        <div class="care-divider"></div>
+ 
+        <div class="care-section-label">Zawartość pakietu</div>
+        <div class="care-limits">
+          <div class="care-limit">📦 nielimitowane produkty</div>
+          <div class="care-limit">✏️ nielimitowane zmiany treści</div>
+          <div class="care-limit">⏱️ czas reakcji: 4h</div>
+        </div>
+ 
+        <ul class="care-list">
+          <li>Hosting premium + domena</li>
+          <li>Certyfikat SSL + WAF firewall</li>
+          <li>Aktualizacje + monitoring 24/7</li>
+          <li>Kopia zapasowa (real-time)</li>
+          <li>Raport tygodniowy + rekomendacje</li>
+          <li>Aktywne pozycjonowanie SEO</li>
+          <li>4 grafiki social media / msc</li>
+          <li><strong>Dedykowany opiekun projektu</strong></li>
+        </ul>
+        <a href="#kontakt" class="card-btn">Wybierz Max</a>
+      </div>
+ 
+    </div>
+ 
+    <p class="reveal" style="text-align:center;color:#999;font-size:13px;margin-top:28px">
+      Potrzebujesz więcej produktów lub zmian? <a href="#kontakt" style="color:#9d26ff;font-weight:600;text-decoration:none">Wycenimy indywidualnie →</a>
+    </p>
+  </div>
+</section>
+ 
+<!-- PODSUMOWANIE -->
+<section style="background:var(--bg2);padding:100px 0;overflow:hidden;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 64px;">
+      <div class="sec-label" style="justify-content:center;display:flex">Kompleksowa obsługa</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.8px;color:var(--text);margin-bottom:20px;line-height:1.1;">
+        Wszystko, czego potrzebuje<br>
+        <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Twoja marka</span>
+        — w jednym miejscu
+      </h2>
+      <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;">
+        Nie musisz szukać osobno grafika, webdevelopera i drukarni. U nas dostajesz wszystko spójnie — od pierwszego piksela po gotowy wydruk.
+      </p>
+    </div>
+ 
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:var(--radius);overflow:hidden;">
+ 
+      <!-- Webdesign -->
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.15) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="font-size:40px;margin-bottom:20px;">🎨</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Wyjątkowy webdesign</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">
+          Strony i sklepy, które nie wyglądają jak kolejny szablon z internetu. Każdy projekt to indywidualna koncepcja — przemyślana pod Twoją branżę, klientów i cele sprzedażowe.
+        </p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Strony wizytówkowe i firmowe
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Sklepy internetowe e-commerce
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Landing page i kampanie
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Komunikacja wizualna -->
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;border-left:1px solid rgba(255,255,255,.06);border-right:1px solid rgba(255,255,255,.06);transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(14,193,248,.12) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="font-size:40px;margin-bottom:20px;">✦</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Spójna komunikacja wizualna</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">
+          Logotyp, kolory, typografia, social media, stopka e-mail — wszystko zaprojektowane jako jeden spójny system. Twoja marka mówi jednym głosem wszędzie, gdzie się pojawia.
+        </p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Identyfikacja wizualna i branding
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Grafiki social media (FB / IG / LinkedIn)
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Banery reklamowe i stopki e-mail
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Druk -->
+      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
+        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.1) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="font-size:40px;margin-bottom:20px;">🖨️</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Druk najwyższej jakości</h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">
+          Projekt, który wygląda świetnie na ekranie, musi też robić wrażenie w dłoniach klienta. Przygotowujemy pliki DTP gotowe do druku — z właściwymi spadami, kolorystyką CMYK i rozdzielczością.
+        </p>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Wizytówki, ulotki, plakaty
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Vouchery i materiały promocyjne
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Przygotowanie do druku (CMYK + spady)
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <div class="reveal" style="margin-top:48px;padding:36px 40px;background:var(--grad-soft);border:1px solid rgba(157,38,255,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;">
+      <div>
+        <p style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:6px;">Jeden zespół. Pełna spójność. Zero chaosu.</p>
+        <p style="color:var(--muted);font-size:15px;font-weight:300;">Nie tracisz czasu na koordynację między różnymi wykonawcami — my ogarniamy wszystko od A do Z.</p>
+      </div>
+      <a href="#kontakt" class="btn-primary" style="white-space:nowrap;flex-shrink:0;">Porozmawiajmy →</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER CTA -->
+<section class="footer-cta" id="kontakt">
+  <div class="footer-cta-orb"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2>Gotowy na nową jakość<br>swojej marki?</h2>
+      <p>Skonsultuj się z nami bezpłatnie — bez zobowiązań.</p>
+      <a href="mailto:hello@pixiart.pl" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="#">Polityka prywatności</a>
+        <a href="#">Regulamin</a>
+        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</main>
+
+</body>
+</html>
+ 

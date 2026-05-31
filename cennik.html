@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cennik — Pixiart. Przejrzyste ceny stron internetowych, sklepów e-commerce, identyfikacji wizualnej, grafiki i opieki po wdrożeniu. Bez ukrytych kosztów.">
+  <title>Cennik — Pixiart</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="images/sygnet.png" alt="Pixiart Logo">
+    </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="realizacje.html">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="wsparcie.html">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk</a></li>
+        </ul>
+      </li>
+      <li><a href="cennik.html" class="nav__link active">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
+    <small style="color: var(--blue); text-transform: uppercase; letter-spacing: 1px;">Menu</small>
+  </div>
+  <a href="index.html#oferta" class="mob-link">Strony WWW</a>
+  <a href="index.html#sklepy" class="mob-link">Sklepy Online</a>
+  <a href="realizacje.html" class="mob-link">Realizacje</a>
+  <a href="index.html#komunikacja" class="mob-link">Grafika + Druk</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="index.html#faq" class="mob-link">FAQ</a>
+  <div style="margin-top: 20px; padding: 0 20px;">
+    <a href="kontakt.html" class="mob-cta">DARMOWA WYCENA →</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="index.html">Strona główna</a>
+      <span>/</span>
+      <strong>Cennik</strong>
+    </div>
+    <div class="hero__label">Przejrzyste ceny</div>
+    <h1>Wiesz za co płacisz — zero ukrytych kosztów</h1>
+    <p class="hero__sub">Wszystkie ceny w jednym miejscu. Znajdź pakiet dopasowany do swojego projektu i budżetu, a resztą zajmiemy się my.</p>
+    <div class="hero__actions">
+      <a href="kontakt.html" class="btn-primary">Zamów bezpłatną wycenę →</a>
+      <a href="#pakiety" class="btn-ghost">Przejdź do pakietów</a>
+    </div>
+  </div>
+</section>
+
+<!-- PAKIETY Z TABAMI -->
+<section id="pakiety" style="padding-top:0;">
+  <div class="container">
+
+    <div class="reveal" style="text-align:center;">
+      <div class="price-tabs">
+        <button class="price-tab active" onclick="switchTab('www', this)">🖥️ Strony WWW</button>
+        <button class="price-tab" onclick="switchTab('sklepy', this)">🛒 Sklepy</button>
+        <button class="price-tab" onclick="switchTab('grafika', this)">🎨 Grafika</button>
+        <button class="price-tab" onclick="switchTab('druk', this)">🖨️ Druk</button>
+        <button class="price-tab" onclick="switchTab('opieka', this)">🔄 Opieka</button>
+      </div>
+    </div>
+
+    <!-- ── TAB: WWW ── -->
+    <div class="tab-panel active reveal" id="tab-www">
+      <div class="cards-grid">
+        <div class="price-card">
+          <div class="card-icon">🚀</div>
+          <h3>Abonament</h3>
+          <p class="card-sub">Szablon + opieka miesięczna</p>
+          <div class="card-price">od 89 <span>zł / msc</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Strona na profesjonalnym szablonie</li>
+            <li>Hosting i opieka techniczna</li>
+            <li>Projekt wizytówek (2 wersje / 3 poprawki)</li>
+            <li>Wsparcie mailowe</li>
+            <li>Certyfikat SSL</li>
+            <li class="no">Własny projekt graficzny</li>
+            <li class="no">Pozycjonowanie SEO</li>
+          </ul>
+          <div class="exchange-tag">💡 ZAMIEŃ NA BANER FB</div>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="badge-top">⚡ NAJLEPSZA OFERTA</div>
+          <div class="card-icon">✦</div>
+          <h3>Zestaw Standard</h3>
+          <p class="card-sub">Strona Premium + Wizytówki</p>
+          <div class="price-old">2 999 zł</div>
+          <div class="card-price">1 990 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Wdrożenie strony Premium</li>
+            <li>Optymalizacja SEO pod Google</li>
+            <li>Projekt wizytówek GRATIS</li>
+            <li>2 wersje / 3 poprawki</li>
+            <li>Certyfikat SSL + analityka</li>
+            <li>Panel CMS + szkolenie</li>
+            <li>Czas realizacji: 7–14 dni</li>
+          </ul>
+          <div class="exchange-tag">💡 ZAMIEŃ NA BANER FB</div>
+          <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
+        </div>
+
+        <div class="price-card">
+          <div class="card-icon">💎</div>
+          <h3>Indywidualna</h3>
+          <p class="card-sub">Unikalny projekt od zera</p>
+          <div class="card-price">od 9 990 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Unikalny projekt UX/UI</li>
+            <li>Strategia i branding</li>
+            <li>Wizytówki Premium</li>
+            <li>Dedykowany opiekun projektu</li>
+            <li>Pełne SEO + analityka</li>
+            <li>Nieograniczone poprawki w projekcie</li>
+            <li>Czas realizacji: ustalany indywidualnie</li>
+          </ul>
+          <div class="exchange-tag">💡 DOWOLNA ZAMIANA SM</div>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: SKLEPY ── -->
+    <div class="tab-panel reveal" id="tab-sklepy">
+      <div class="cards-grid">
+        <div class="price-card">
+          <div class="card-icon">🛒</div>
+          <h3>Sklep Starter</h3>
+          <p class="card-sub">Gotowy szablon + konfiguracja</p>
+          <div class="card-price">od 1 490 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Sklep na sprawdzonym szablonie</li>
+            <li>Do 50 produktów</li>
+            <li>Płatności online (Przelewy24 / Stripe)</li>
+            <li>Integracja z InPost / kurierami</li>
+            <li>Certyfikat SSL</li>
+            <li class="no">Własny projekt graficzny</li>
+            <li class="no">Integracja z Baselinker</li>
+          </ul>
+          <div class="exchange-tag">💡 ZAMIEŃ NA BANER FB</div>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+          <div class="card-icon">🏪</div>
+          <h3>Sklep Standard</h3>
+          <p class="card-sub">Projekt Premium + pełna konfiguracja</p>
+          <div class="price-old">5 990 zł</div>
+          <div class="card-price">3 990 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Unikalny projekt graficzny sklepu</li>
+            <li>Nielimitowana liczba produktów</li>
+            <li>Płatności (Przelewy24 / Stripe / BLIK)</li>
+            <li>Integracja z InPost, DPD, kurierami</li>
+            <li>Certyfikat SSL + analityka Google</li>
+            <li>Podstawowe SEO sklepu GRATIS</li>
+            <li>Facebook / Meta Pixel</li>
+          </ul>
+          <div class="exchange-tag">💡 ZAMIEŃ NA KAMPANIĘ META</div>
+          <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
+        </div>
+
+        <div class="price-card">
+          <div class="card-icon">🚀</div>
+          <h3>Sklep Premium</h3>
+          <p class="card-sub">Zaawansowany e-commerce od zera</p>
+          <div class="card-price">od 8 990 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Dedykowany projekt UX/UI</li>
+            <li>Zaawansowane filtry i wyszukiwarka</li>
+            <li>Program lojalnościowy / rabaty</li>
+            <li>Integracja z ERP / Baselinker</li>
+            <li>Pełne SEO + audyt prędkości</li>
+            <li>Google Merchant + Shopping</li>
+            <li>Dedykowany opiekun projektu</li>
+          </ul>
+          <div class="exchange-tag">💡 DOWOLNA ZAMIANA SM</div>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: GRAFIKA ── -->
+    <div class="tab-panel reveal" id="tab-grafika">
+      <div class="cards-grid">
+        <div class="price-card">
+          <div class="card-icon">✏️</div>
+          <h3>Logo Basic</h3>
+          <p class="card-sub">Logotyp dla nowej marki</p>
+          <div class="card-price">od 490 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Projekt logotypu (2 koncepcje)</li>
+            <li>3 rundy poprawek</li>
+            <li>Pliki źródłowe (AI, PDF, PNG, SVG)</li>
+            <li>Wersja pozioma i pionowa</li>
+            <li>Wersja kolorowa i mono</li>
+            <li class="no">Paleta kolorów marki</li>
+            <li class="no">Brand book</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="badge-top">💎 POLECAMY</div>
+          <div class="card-icon">✦</div>
+          <h3>Brand Identity</h3>
+          <p class="card-sub">Pełna identyfikacja wizualna</p>
+          <div class="card-price">od 1 490 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Logo (3 koncepcje + poprawki)</li>
+            <li>Paleta kolorów marki (HEX + CMYK)</li>
+            <li>Dobór typografii (2 kroje)</li>
+            <li>Projekt wizytówek (2 wersje)</li>
+            <li>Szablony social media (3 formaty)</li>
+            <li>Brand book — 1-stronicowe summary</li>
+            <li>Stopka e-mail</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn card-btn--primary">Zamów →</a>
+        </div>
+
+        <div class="price-card">
+          <div class="card-icon">🖥️</div>
+          <h3>Zestaw Cyfrowy</h3>
+          <p class="card-sub">Social media i online</p>
+          <div class="card-price">950 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Grafiki social media (FB / IG / LinkedIn)</li>
+            <li>Banery reklamowe online (3 rozmiary)</li>
+            <li>Stopka e-mail z grafiką</li>
+            <li>Okładka Facebook + zdjęcie profilowe</li>
+            <li>Spójna identyfikacja wizualna</li>
+            <li class="no">Materiały drukowane</li>
+            <li class="no">Brand book</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: DRUK ── -->
+    <div class="tab-panel reveal" id="tab-druk">
+      <div class="cards-grid">
+        <div class="price-card">
+          <div class="card-icon">🖨️</div>
+          <h3>Zestaw DTP</h3>
+          <p class="card-sub">Materiały do druku</p>
+          <div class="card-price">1 850 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Ulotka reklamowa (2 strony)</li>
+            <li>Plakat (A3 / A4 / A5 — 1 format)</li>
+            <li>Voucher (3 warianty kwotowe)</li>
+            <li>Przygotowanie do druku (CMYK + spady)</li>
+            <li>Pliki gotowe dla drukarni</li>
+            <li class="no">Grafiki online</li>
+            <li class="no">Katalog / folder</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="badge-top">💎 POLECAMY</div>
+          <div class="card-icon">🔁</div>
+          <h3>Zestaw Mieszany</h3>
+          <p class="card-sub">Online + druk w jednym</p>
+          <div class="card-price">2 490 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Grafiki online (FB / IG / LinkedIn)</li>
+            <li>Ulotka + plakat + voucher</li>
+            <li>Spójna identyfikacja wizualna</li>
+            <li>Pełny pack marketingowy</li>
+            <li>Przygotowanie do druku w cenie</li>
+            <li>Banery reklamowe online</li>
+            <li>Stopka e-mail</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn card-btn--primary">Zamów →</a>
+        </div>
+
+        <div class="price-card">
+          <div class="card-icon">📚</div>
+          <h3>Katalog / Folder</h3>
+          <p class="card-sub">Materiały sprzedażowe</p>
+          <div class="card-price">od 1 200 <span>zł</span></div>
+          <div class="card-divider"></div>
+          <ul class="card-list">
+            <li>Projekt katalogu (do 12 stron)</li>
+            <li>Folder firmowy (3 warianty)</li>
+            <li>Przygotowanie do druku (CMYK + spady)</li>
+            <li>Wersja PDF do wysyłki mailowej</li>
+            <li>2 rundy poprawek</li>
+            <li class="no">Grafiki online</li>
+            <li class="no">Social media</li>
+          </ul>
+          <a href="kontakt.html" class="card-btn">Zamów</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: OPIEKA ── -->
+    <div class="tab-panel" id="tab-opieka">
+      <div class="care-cards reveal">
+        <div class="care-card">
+          <div class="care-tag care-tag--basic">BASIC</div>
+          <h3>Opieka Basic</h3>
+          <p class="care-sub">Dla małych stron wizytówkowych</p>
+          <div class="care-price"><sup>od </sup>149 <sub>zł / msc</sub></div>
+          <div class="care-divider"></div>
+          <div class="care-limits">
+            <div class="care-limit">📦 do 5 produktów / msc</div>
+            <div class="care-limit">✏️ do 3 zmian treści / msc</div>
+            <div class="care-limit">⏱️ czas reakcji: 48h</div>
+          </div>
+          <ul class="care-list">
+            <li>Hosting + domena w cenie</li>
+            <li>Certyfikat SSL</li>
+            <li>Aktualizacje systemu CMS</li>
+            <li>Kopia zapasowa (1× / tydzień)</li>
+            <li>Raport miesięczny (odwiedziny)</li>
+            <li class="no">Pozycjonowanie SEO</li>
+            <li class="no">Grafiki social media</li>
+            <li class="no">Dedykowany opiekun</li>
+          </ul>
+          <a href="kontakt.html" class="care-btn">Wybierz Basic</a>
+        </div>
+
+        <div class="care-card care-card--featured">
+          <div class="badge-top">⚡ NAJPOPULARNIEJSZY</div>
+          <div class="care-tag care-tag--pro">PRO</div>
+          <h3>Opieka Pro</h3>
+          <p class="care-sub">Dla sklepów i aktywnych firm</p>
+          <div class="care-price"><sup>od </sup>349 <sub>zł / msc</sub></div>
+          <div class="care-divider"></div>
+          <div class="care-limits">
+            <div class="care-limit">📦 do 20 produktów / msc</div>
+            <div class="care-limit">✏️ do 10 zmian treści / msc</div>
+            <div class="care-limit">⏱️ czas reakcji: 24h</div>
+          </div>
+          <ul class="care-list">
+            <li>Hosting + domena w cenie</li>
+            <li>Certyfikat SSL</li>
+            <li>Aktualizacje systemu CMS</li>
+            <li>Kopia zapasowa (codziennie)</li>
+            <li>Raport miesięczny (pełna analityka)</li>
+            <li>Podstawowe pozycjonowanie SEO</li>
+            <li>2 grafiki social media / msc</li>
+            <li class="no">Dedykowany opiekun</li>
+          </ul>
+          <a href="kontakt.html" class="care-btn care-btn--primary">Wybierz Pro →</a>
+        </div>
+
+        <div class="care-card">
+          <div class="care-tag care-tag--max">MAX</div>
+          <h3>Opieka Max</h3>
+          <p class="care-sub">Dla rozwijających się e-commerce</p>
+          <div class="care-price"><sup>od </sup>699 <sub>zł / msc</sub></div>
+          <div class="care-divider"></div>
+          <div class="care-limits">
+            <div class="care-limit">📦 nielimitowane produkty</div>
+            <div class="care-limit">✏️ nielimitowane zmiany</div>
+            <div class="care-limit">⏱️ czas reakcji: 4h</div>
+          </div>
+          <ul class="care-list">
+            <li>Hosting premium + domena</li>
+            <li>Certyfikat SSL + WAF firewall</li>
+            <li>Aktualizacje + monitoring 24/7</li>
+            <li>Kopia zapasowa (real-time)</li>
+            <li>Raport tygodniowy + rekomendacje</li>
+            <li>Aktywne pozycjonowanie SEO</li>
+            <li>4 grafiki social media / msc</li>
+            <li><strong>Dedykowany opiekun projektu</strong></li>
+          </ul>
+          <a href="kontakt.html" class="care-btn">Wybierz Max</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CENNIK POJEDYNCZYCH USŁUG -->
+<section style="background:var(--bg2);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
+      <div class="sec-label" style="text-align:center">Cennik pojedynczych usług</div>
+      <div class="sec-title" style="text-align:center">Ile kosztuje na rynku?</div>
+      <p style="color:var(--muted);font-size:16px;font-weight:300;text-align:center;">Ceny rynkowe w Polsce 2025 — zebraliśmy je z agencji webowych, studiów graficznych i drukarni, żebyś wiedział co jest rozsądną ceną, a co przepłacaniem.</p>
+    </div>
+
+    <!-- STRONY I APLIKACJE -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--grad-soft);border:1px solid rgba(157,38,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🖥️</div>
+        <h3 style="font-size:20px;font-weight:800;">Strony internetowe i aplikacje</h3>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.08);"></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);">
+              <th style="padding:14px 20px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Usługa</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Rynek</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;">Pixiart</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Strona wizytówkowa (szablon)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">1 500 – 3 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 89 zł/msc</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Strona firmowa Premium (WordPress)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">2 000 – 8 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">1 990 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Strona indywidualna (projekt od zera)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">8 000 – 25 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 9 990 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Landing page (kampania / lead gen)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">1 500 – 5 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">wycena indyw.</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Sklep internetowy (szablon)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">2 000 – 5 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 1 490 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Sklep Premium (projekt UX/UI od zera)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">6 000 – 20 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 8 990 zł</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Hosting + domena (rocznie)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">400 – 1 200 zł/rok</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w cenie pakietu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRAFIKA -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--grad-soft);border:1px solid rgba(157,38,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎨</div>
+        <h3 style="font-size:20px;font-weight:800;">Grafika i identyfikacja wizualna</h3>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.08);"></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);">
+              <th style="padding:14px 20px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Usługa</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Rynek</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;">Pixiart</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Projekt logo (podstawowy)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">500 – 1 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 490 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Logo + prosta księga identyfikacji</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">2 000 – 3 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 1 490 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Pełna identyfikacja wizualna (Brand 360°)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">4 000 – 12 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 3 990 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Wizytówki (projekt, 2 wersje)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">300 – 800 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w pakiecie gratis</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Grafika social media (1 post)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">80 – 250 zł / szt</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">zestaw od 490 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Komplet grafik social media (FB+IG+LI)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">800 – 2 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">950 zł</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Stopka e-mail</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">150 – 400 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w zestawie</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DRUK -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--grad-soft);border:1px solid rgba(157,38,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🖨️</div>
+        <h3 style="font-size:20px;font-weight:800;">Przygotowanie do druku (DTP)</h3>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.08);"></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);">
+              <th style="padding:14px 20px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Projekt graficzny</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Rynek (projekt)</th>
+              <th style="padding:14px 20px;text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;">Pixiart</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Ulotka reklamowa A5 (projekt obu stron)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">200 – 600 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w pakiecie DTP</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Plakat A3 / A4 (projekt)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">200 – 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w pakiecie DTP</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Voucher prezentowy (3 warianty)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">300 – 700 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w pakiecie DTP</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Katalog produktowy (do 12 stron)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">2 000 – 4 000 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">od 1 200 zł</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Baner reklamowy online (3 rozmiary)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">200 – 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">w zestawie</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 20px;color:var(--text);font-weight:500;">Zestaw Mieszany (ulotka+plakat+voucher+social)</td>
+              <td style="padding:14px 20px;text-align:center;color:var(--muted);">1 500 – 3 500 zł</td>
+              <td style="padding:14px 20px;text-align:center;font-weight:700;color:var(--blue);">2 490 zł</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:12px;font-weight:300;">* Ceny rynkowe zebrane z agencji webowych, studiów graficznych i drukarni w Polsce (2025). Podane ceny dotyczą wyłącznie projektu graficznego — koszt samego druku zależy od nakładu i drukarni.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO BOXY -->
+<section style="background:var(--bg2);padding:80px 0;">
+  <div class="container">
+    <div class="info-boxes reveal">
+      <div class="info-box">
+        <div class="ib-icon">💳</div>
+        <div>
+          <h4>Raty bez odsetek</h4>
+          <p>Większe projekty możemy rozłożyć na 2–3 raty. Połowa na start, reszta po uruchomieniu — bez żadnych dodatkowych kosztów.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="ib-icon">📋</div>
+        <div>
+          <h4>Wycena w 24h</h4>
+          <p>Wyślij zapytanie — wrócimy z dokładną wyceną i zakresem projektu w ciągu jednego dnia roboczego.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="ib-icon">🔒</div>
+        <div>
+          <h4>Bez ukrytych kosztów</h4>
+          <p>Cena podana w ofercie to cena finalna. Hosting, domena i SSL są wliczone tam, gdzie to zaznaczyliśmy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Pytania o ceny</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy ceny są ostateczne czy mogą się zmienić?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Ceny podane w cenniku to ceny startowe — ostateczna kwota zależy od zakresu projektu i jest ustalana indywidualnie po briefie. Wycena jest zawsze bezpłatna i wysyłamy ją w ciągu 24h od kontaktu. Po akceptacji wyceny cena jest gwarantowana i się nie zmienia.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy można zapłacić w ratach?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — dla projektów powyżej 1 500 zł oferujemy płatność w 2 ratach: 50% zaliczki na start i 50% po oddaniu projektu. Dla większych realizacji możliwe są 3 raty. Bez odsetek i bez żadnych dodatkowych kosztów.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Co wchodzi w cenę a co jest dodatkowo płatne?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">W cenę wchodzi zawsze: projekt graficzny, wdrożenie, szkolenie z obsługi i pliki w wymaganych formatach. Dodatkowo płatne mogą być: zakup zdjęć stockowych (jeśli nie dostarczasz własnych), tłumaczenia treści, copywriting, domeny premium (.eu, .com, itd.) oraz dodatkowe rundy poprawek powyżej limitu pakietu.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy jest możliwość negocjacji ceny?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Dla stałych klientów i przy zamówieniu kilku usług jednocześnie (np. strona + identyfikacja wizualna) chętnie rozmawiamy o rabatach pakietowych. Napisz do nas i omówimy szczegóły.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy wystawiacie faktury VAT?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — wystawiamy faktury VAT dla firm i osób prywatnych. Faktura jest wystawiana po wpłynięciu zaliczki lub po zakończeniu projektu, zgodnie z ustaleniami. Przyjmujemy przelewy bankowe i płatności online.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg2);padding:100px 0;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal">
+      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:-1px;margin-bottom:14px;">Nie wiesz który pakiet wybrać?</h2>
+      <p style="color:var(--muted);font-size:18px;margin-bottom:36px;font-weight:300;">Napisz do nas — bezpłatnie doradzimy i dobierzemy najlepsze rozwiązanie.</p>
+      <a href="kontakt.html" class="btn-primary" style="font-size:16px;padding:16px 34px">Zapytaj o wycenę →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="index.html">Strona główna</a>
+        <a href="strony.html">Strony WWW</a>
+        <a href="sklepy.html">Sklepy</a>
+        <a href="identyfikacja.html">Grafika + Druk</a>
+        <a href="realizacje.html">Realizacje</a>
+        <a href="wsparcie.html">Wsparcie</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="#">Polityka prywatności</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
