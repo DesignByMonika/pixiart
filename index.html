@@ -5,26 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Pixiart — profesjonalne strony www, identyfikacja wizualna i grafika dla firm. Nowoczesny design, który sprzedaje Twoje usługi.">
   <title>Pixiart — Design, który sprzedaje</title>
+  <meta property="og:title" content="Pixiart — Design, który sprzedaje">
+  <meta property="og:description" content="Profesjonalne strony www, sklepy internetowe i identyfikacja wizualna. Tworzymy narzędzia, które sprzedają Twoje usługi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pixiart.pl">
+  <meta property="og:image" content="https://pixiart.pl/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pixiart — Design, który sprzedaje">
+  <meta name="twitter:description" content="Profesjonalne strony www, sklepy internetowe i identyfikacja wizualna.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="index.html" class="logo">
+    <a href="#" class="logo">
       <img src="images/sygnet.png" alt="Pixiart Logo">
     </a>
     <ul class="nav__menu">
       <li class="nav__item">
         <a href="index.html" class="nav__link">Start <small>▼</small></a>
         <ul class="dropdown-menu">
-          <li><a href="#oferta">Strony WWW</a></li>
-          <li><a href="#sklepy">Sklepy Online</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#komunikacja">Grafika + Druk</a></li>
-          <li><a href="#opinie">Opinie</a></li>
-          <li><a href="#faq">Najczęstsze pytania</a></li>
-          <li><a href="#wsparcie">Opieka po wdrożeniu</a></li>
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="index.html#wsparcie">Opieka po wdrożeniu</a></li>
         </ul>
       </li>
       <li class="nav__item">
@@ -45,9 +53,10 @@
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <div style="padding:20px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:10px;">
-    <small style="color:var(--blue);text-transform:uppercase;letter-spacing:1px;">Menu</small>
+  <div class="mobile-menu__header">
+    <small class="mobile-menu__label">Menu</small>
   </div>
   <a href="strony.html" class="mob-link">Strony WWW</a>
   <a href="sklepy.html" class="mob-link">Sklepy Online</a>
@@ -55,14 +64,15 @@
   <a href="realizacje.html" class="mob-link">Realizacje</a>
   <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
   <a href="#faq" class="mob-link">FAQ</a>
-  <div style="margin-top:20px;padding:0 20px;">
+  <div class="mobile-menu__cta-wrap">
     <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
   </div>
 </div>
 
-<!-- HERO -->
 <main>
-<section class="hero hero--home">
+
+<!-- HERO -->
+<section class="hero">
   <div class="hero-bg">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
@@ -72,7 +82,7 @@
     <div class="hero__inner">
       <div>
         <h1>Twój biznes zasługuje na profesjonalny design</h1>
-        <p class="hero__sub">Od nowoczesnych stron www po spójną identyfikację wizualną.<br>Tworzymy narzędzia, które sprzedają Twoje usługi.</p>
+        <p class="hero__sub">Od nowoczesnych stron www po spójną identyfikację wizualną. <br> Tworzymy narzędzia, które sprzedają Twoje usługi.</p>
         <div class="hero__actions">
           <a href="#oferta" class="btn-primary">Sprawdź pakiety →</a>
           <a href="kontakt.html" class="btn-ghost">Skontaktuj się z Nami</a>
@@ -88,7 +98,9 @@
           </div>
         </div>
       </div>
-      <div class="hero__visual" id="canvas-container"></div>
+      <div class="hero__visual">
+        <div id="canvas-container"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -102,7 +114,7 @@
     <span>STARTUPY</span><span>·</span>
     <span>E-COMMERCE</span><span>·</span>
     <span>GABINETY MEDYCZNE</span><span>·</span>
-    <span>ARCHITEKCI</span><span>·</span>
+    <span>ARCHITEKT</span><span>·</span>
     <span>AGENCJE</span><span>·</span>
     <span>RESTAURACJE</span><span>·</span>
     <span>SALONY PIĘKNOŚCI</span><span>·</span>
@@ -110,67 +122,85 @@
     <span>STARTUPY</span><span>·</span>
     <span>E-COMMERCE</span><span>·</span>
     <span>GABINETY MEDYCZNE</span><span>·</span>
-    <span>ARCHITEKCI</span><span>·</span>
+    <span>ARCHITEKT</span><span>·</span>
     <span>AGENCJE</span><span>·</span>
   </div>
 </div>
 
 <!-- PAKIETY WWW -->
-<section class="light" id="oferta">
+<section class="light svg-lines-bg" id="oferta">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label">Pakiety</div>
-      <div class="sec-title">Strona WWW + Wizytówki</div>
-      <p class="sec-sub">Wybierz pakiet dopasowany do Twojej skali i budżetu.</p>
+      <div class="sec-label">Pakiety stron WWW</div>
+      <div class="sec-title">Wybierz pakiet dopasowany do Twojego biznesu</div>
+      <p class="sec-sub">Trzy czytelne pakiety — bez ukrytych kosztów. Każdy zawiera darmową konsultację i certyfikat SSL.</p>
     </div>
     <div class="cards-grid reveal">
+
+      <!-- START ONLINE -->
       <div class="card">
         <div class="card-icon">🚀</div>
-        <h3>Abonament</h3>
-        <p class="muted">Szablon + Opieka</p>
-        <div class="price">od 89 zł <span style="font-size:14px;font-weight:400;color:#888">/ msc</span></div>
+        <h3>Start Online</h3>
+        <p class="muted">Idealny dla małych firm i osób rozpoczynających działalność</p>
+        <div class="price">89 zł <span style="font-size:14px;font-weight:400;color:#888">/ mies.</span></div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">Abonament — bez umowy na rok</p>
         <ul>
-          <li>Strona na profesjonalnym szablonie</li>
-          <li>Hosting i opieka techniczna</li>
-          <li>Projekt wizytówek (2 wersje / 3 poprawki)</li>
-          <li>Wsparcie mailowe</li>
+          <li>Do 5 podstron</li>
+          <li>Profesjonalny szablon premium</li>
+          <li>Formularz kontaktowy</li>
+          <li>Hosting + certyfikat SSL w cenie</li>
+          <li>Dostosowanie treści i kolorystyki</li>
+          <li>Darmowa konsultacja startowa</li>
+          <li>2 rundy poprawek</li>
         </ul>
-        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
-        <a href="kontakt.html" class="card-btn">Zamów</a>
+        <div class="exchange">💡 MOŻLIWOŚĆ ZAMIANY NA BANER FB</div>
+        <a href="kontakt.html" class="card-btn">Zacznij teraz</a>
       </div>
+
+      <!-- BIZNES -->
       <div class="card card--featured">
-        <div class="badge-top">⚡ NAJLEPSZA OFERTA</div>
+        <div class="badge-top">⚡ NAJCZĘŚCIEJ WYBIERANY</div>
         <div class="card-icon">✦</div>
-        <h3>Zestaw Standard</h3>
-        <p class="muted">Strona Premium + Wizytówki</p>
+        <h3>Biznes</h3>
+        <p class="muted">Dla firm, które poważnie traktują obecność online</p>
         <div class="price">
-          <span class="old">2 999 zł</span>
-          1 990 zł
+          <span class="old">3 490 zł</span>
+          2 490 zł
         </div>
+        <p style="font-size:12px;color:#888;margin:-8px 0 14px">Płatność jednorazowa</p>
         <ul>
-          <li>Wdrożenie strony Premium</li>
-          <li>Optymalizacja SEO pod Google</li>
+          <li>Do 10 podstron</li>
+          <li>Rozbudowana personalizacja projektu</li>
+          <li>Blog lub sekcja portfolio</li>
+          <li>Formularze + integracje social media</li>
+          <li>Podstawowe SEO pod Google</li>
+          <li>Darmowa konsultacja + brief</li>
+          <li>4 rundy poprawek</li>
           <li><strong>Projekt wizytówek GRATIS</strong></li>
-          <li>2 wersje / 3 poprawki</li>
-          <li>Certyfikat SSL + analityka</li>
         </ul>
-        <div class="exchange">💡 ZAMIEŃ NA BANER FB</div>
+        <div class="exchange">💡 ZAMIEŃ WIZYTÓWKI NA BANER FB</div>
         <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
       </div>
+
+      <!-- PREMIUM -->
       <div class="card">
         <div class="card-icon">💎</div>
-        <h3>Indywidualna</h3>
-        <p class="muted">Projekt od zera</p>
-        <div class="price">od 9 990 zł</div>
+        <h3>Premium</h3>
+        <p class="muted">Projekt tworzony indywidualnie od podstaw</p>
+        <div class="price">od 4 990 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">Wycena po konsultacji</p>
         <ul>
-          <li>Unikalny projekt UX/UI</li>
-          <li>Strategia i branding</li>
-          <li>Wizytówki Premium</li>
-          <li>Dedykowany opiekun projektu</li>
+          <li>Unikalny projekt graficzny UX/UI</li>
+          <li>Pełne dopasowanie do marki</li>
+          <li>Zaawansowane animacje i interakcje</li>
+          <li>Rozbudowane sekcje i funkcjonalności</li>
+          <li>Konsultacje projektowe na każdym etapie</li>
+          <li>Poprawki do pełnej akceptacji projektu</li>
         </ul>
-        <div class="exchange">💡 DOWOLNA ZAMIANA SM</div>
-        <a href="kontakt.html" class="card-btn">Zamów</a>
+        <div class="exchange">💡 DOWOLNA ZAMIANA NA USŁUGI SM</div>
+        <a href="kontakt.html" class="card-btn">Umów konsultację</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -240,17 +270,245 @@
   </div>
 </section>
 
+<!-- PROCES / JAK WYGLĄDA WSPÓŁPRACA -->
+<section class="hww-section" id="proces">
+  <div class="hww-bg-orb hww-bg-orb-1"></div>
+  <div class="hww-bg-orb hww-bg-orb-2"></div>
+  <div class="container">
+
+    <div class="reveal hww-header">
+      <div class="sec-label">Proces współpracy</div>
+      <h2 class="hww-title">Od pomysłu do gotowej strony<br><span class="hww-title-grad">w 5 krokach</span></h2>
+      <p class="hww-sub">Przejrzysty proces bez niespodzianek — wiesz co się dzieje na każdym etapie i masz pełny wpływ na efekt końcowy.</p>
+    </div>
+
+    <!-- TOP STEPPER — dots + line -->
+    <div class="hww-track reveal" id="hwwTrack">
+      <div class="hww-line-wrap">
+        <div class="hww-line-fill" id="hwwLine"></div>
+      </div>
+      <div class="hww-step hww-active" id="hwwS1" onclick="hwwActivate(0)">
+        <div class="hww-dot-wrap"><div class="hww-dot-ring"></div><div class="hww-dot">💬</div></div>
+        <div class="hww-num-label">01</div>
+        <div class="hww-step-title">Konsultacja</div>
+      </div>
+      <div class="hww-step" id="hwwS2" onclick="hwwActivate(1)">
+        <div class="hww-dot-wrap"><div class="hww-dot-ring"></div><div class="hww-dot">📋</div></div>
+        <div class="hww-num-label">02</div>
+        <div class="hww-step-title">Brief</div>
+      </div>
+      <div class="hww-step" id="hwwS3" onclick="hwwActivate(2)">
+        <div class="hww-dot-wrap"><div class="hww-dot-ring"></div><div class="hww-dot">🎨</div></div>
+        <div class="hww-num-label">03</div>
+        <div class="hww-step-title">Projekt graficzny</div>
+      </div>
+      <div class="hww-step" id="hwwS4" onclick="hwwActivate(3)">
+        <div class="hww-dot-wrap"><div class="hww-dot-ring"></div><div class="hww-dot">⚙️</div></div>
+        <div class="hww-num-label">04</div>
+        <div class="hww-step-title">Wdrożenie</div>
+      </div>
+      <div class="hww-step" id="hwwS5" onclick="hwwActivate(4)">
+        <div class="hww-dot-wrap"><div class="hww-dot-ring"></div><div class="hww-dot">🚀</div></div>
+        <div class="hww-num-label">05</div>
+        <div class="hww-step-title">Start i opieka</div>
+      </div>
+    </div>
+
+    <!-- DETAIL CARDS — one per step, toggled by JS -->
+    <div class="hww-details reveal" id="hwwDetails">
+
+      <div class="hww-detail hww-detail-active" id="hwwD1">
+        <div class="hww-detail-left">
+          <div class="hww-detail-num">01</div>
+          <div class="hww-detail-icon">💬</div>
+          <h3 class="hww-detail-title">Bezpłatna konsultacja</h3>
+          <p class="hww-detail-body">Zaczynamy od rozmowy — telefonicznie, przez Zoom lub mailowo. Opowiadasz nam o swojej firmie, celach i oczekiwaniach. Nie musisz wiedzieć wszystkiego — jesteśmy tu po to, żeby pomóc Ci ułożyć pomysły w konkretny plan.</p>
+          <div class="hww-detail-tags">
+            <span class="hww-tag">📞 Telefon lub Zoom</span>
+            <span class="hww-tag">⏱ ok. 30 minut</span>
+            <span class="hww-tag">✅ Bezpłatnie</span>
+          </div>
+        </div>
+        <div class="hww-detail-right">
+          <div class="hww-detail-card">
+            <div class="hww-dc-label">Co omawiamy?</div>
+            <ul class="hww-dc-list">
+              <li>Cel i przeznaczenie strony</li>
+              <li>Twoja branża i grupa docelowa</li>
+              <li>Preferowany styl i inspiracje</li>
+              <li>Zakres projektu i termin realizacji</li>
+              <li>Budżet i forma płatności</li>
+            </ul>
+          </div>
+          <div class="hww-detail-note">
+            <span class="hww-note-dot"></span>
+            Po konsultacji otrzymujesz wycenę w ciągu 24h
+          </div>
+        </div>
+      </div>
+
+      <div class="hww-detail" id="hwwD2">
+        <div class="hww-detail-left">
+          <div class="hww-detail-num">02</div>
+          <div class="hww-detail-icon">📋</div>
+          <h3 class="hww-detail-title">Brief i zakres projektu</h3>
+          <p class="hww-detail-body">Po akceptacji wyceny przesyłamy brief — krótki formularz, który pomaga nam zebrać wszystkie niezbędne informacje. Dowiadujemy się więcej o Twojej marce, konkurencji i tym, czego naprawdę potrzebujesz. To fundament całej realizacji.</p>
+          <div class="hww-detail-tags">
+            <span class="hww-tag">📄 Formularz online</span>
+            <span class="hww-tag">⏱ 1–2 dni robocze</span>
+            <span class="hww-tag">✅ Umowa i faktura</span>
+          </div>
+        </div>
+        <div class="hww-detail-right">
+          <div class="hww-detail-card">
+            <div class="hww-dc-label">Czego potrzebujemy od Ciebie?</div>
+            <ul class="hww-dc-list">
+              <li>Wypełniony brief projektowy</li>
+              <li>Logo i materiały marki (jeśli masz)</li>
+              <li>Teksty i zdjęcia lub zgoda na ich przygotowanie</li>
+              <li>Dostęp do domeny (jeśli posiadasz)</li>
+              <li>Zaliczka 50% wartości projektu</li>
+            </ul>
+          </div>
+          <div class="hww-detail-note">
+            <span class="hww-note-dot"></span>
+            Brak materiałów? Pomagamy — piszemy teksty i dobieramy zdjęcia
+          </div>
+        </div>
+      </div>
+
+      <div class="hww-detail" id="hwwD3">
+        <div class="hww-detail-left">
+          <div class="hww-detail-num">03</div>
+          <div class="hww-detail-icon">🎨</div>
+          <h3 class="hww-detail-title">Projekt graficzny</h3>
+          <p class="hww-detail-body">Tworzymy projekt graficzny strony — od strony głównej po podstrony. Każdy element jest przemyślany: układ, kolory, typografia, zdjęcia. Przesyłamy do akceptacji i czekamy na Twoje uwagi. Poprawiamy tyle razy, ile potrzeba w ramach pakietu.</p>
+          <div class="hww-detail-tags">
+            <span class="hww-tag">🖥 Figma / PDF</span>
+            <span class="hww-tag">⏱ 3–7 dni roboczych</span>
+            <span class="hww-tag">✅ Rundy poprawek</span>
+          </div>
+        </div>
+        <div class="hww-detail-right">
+          <div class="hww-detail-card">
+            <div class="hww-dc-label">Co dostajesz do akceptacji?</div>
+            <ul class="hww-dc-list">
+              <li>Projekt strony głównej (desktop + mobile)</li>
+              <li>Projekt wszystkich podstron</li>
+              <li>Dobór typografii i palety kolorów</li>
+              <li>Propozycje zdjęć i grafik</li>
+              <li>Interaktywny podgląd w przeglądarce</li>
+            </ul>
+          </div>
+          <div class="hww-detail-note">
+            <span class="hww-note-dot"></span>
+            Wdrożenie startuje dopiero po Twojej akceptacji projektu
+          </div>
+        </div>
+      </div>
+
+      <div class="hww-detail" id="hwwD4">
+        <div class="hww-detail-left">
+          <div class="hww-detail-num">04</div>
+          <div class="hww-detail-icon">⚙️</div>
+          <h3 class="hww-detail-title">Wdrożenie i testy</h3>
+          <p class="hww-detail-body">Zaakceptowany projekt trafia do realizacji. Kodujemy stronę, konfigurujemy hosting, domenę, certyfikat SSL, formularze i wszystkie integracje. Testujemy na różnych urządzeniach i przeglądarkach, zanim strona trafi do sieci.</p>
+          <div class="hww-detail-tags">
+            <span class="hww-tag">💻 Kodowanie</span>
+            <span class="hww-tag">⏱ 3–7 dni roboczych</span>
+            <span class="hww-tag">✅ Testy QA</span>
+          </div>
+        </div>
+        <div class="hww-detail-right">
+          <div class="hww-detail-card">
+            <div class="hww-dc-label">Co sprawdzamy przed publikacją?</div>
+            <ul class="hww-dc-list">
+              <li>Responsywność na telefon, tablet, desktop</li>
+              <li>Prędkość ładowania strony</li>
+              <li>Poprawność formularzy i linków</li>
+              <li>Certyfikat SSL i przekierowania</li>
+              <li>Podstawowe SEO: tytuły, opisy, sitemap</li>
+            </ul>
+          </div>
+          <div class="hww-detail-note">
+            <span class="hww-note-dot"></span>
+            Przed publikacją udostępniamy podgląd na prywatnym linku
+          </div>
+        </div>
+      </div>
+
+      <div class="hww-detail" id="hwwD5">
+        <div class="hww-detail-left">
+          <div class="hww-detail-num">05</div>
+          <div class="hww-detail-icon">🚀</div>
+          <h3 class="hww-detail-title">Publikacja i dalsze wsparcie</h3>
+          <p class="hww-detail-body">Strona trafia do sieci. Szkolimy Cię z obsługi panelu administracyjnego — samodzielnie dodasz wpis, zmienisz zdjęcie czy zaktualizujesz cennik. Nie zostawiamy Cię bez wsparcia — możesz wybrać pakiet opieki lub zgłaszać się do nas ad hoc.</p>
+          <div class="hww-detail-tags">
+            <span class="hww-tag">🌍 Strona live</span>
+            <span class="hww-tag">🎓 Szkolenie z CMS</span>
+            <span class="hww-tag">✅ Opieka po wdrożeniu</span>
+          </div>
+        </div>
+        <div class="hww-detail-right">
+          <div class="hww-detail-card">
+            <div class="hww-dc-label">Co dostajesz po publikacji?</div>
+            <ul class="hww-dc-list">
+              <li>Szkolenie z panelu CMS (30 min)</li>
+              <li>Dostępy do hostingu i domeny</li>
+              <li>Dokumentacja i instrukcja obsługi</li>
+              <li>30 dni bezpłatnego wsparcia technicznego</li>
+              <li>Możliwość wyboru pakietu opieki miesięcznej</li>
+            </ul>
+          </div>
+          <div class="hww-detail-note">
+            <span class="hww-note-dot"></span>
+            Reszta płatności (50%) dopiero po akceptacji gotowej strony
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /hww-details -->
+
+    <!-- BOTTOM CTA -->
+    <div class="hww-card reveal">
+      <div class="hww-card-icon">⚡</div>
+      <div class="hww-card-text">
+        <strong>Gotowy rozpocząć projekt?</strong>
+        <span>Skorzystaj z bezpłatnej konsultacji i dowiedz się, które rozwiązanie będzie najlepsze dla Twojej firmy.</span>
+      </div>
+      <button class="hww-card-btn" onclick="window.location.href='kontakt.html'">
+        Umów konsultację →
+      </button>
+    </div>
+
+  </div>
+</section>
+
 <!-- PORTFOLIO -->
-<section class="portfolio" id="portfolio">
+<section class="portfolio svg-lines-bg" id="portfolio">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Realizacje</div>
       <div class="sec-title">Nasze ostatnie projekty</div>
-      <p class="sec-sub" style="color:var(--muted)">Każdy projekt to indywidualne podejście i dbałość o każdy detal.</p>
+      <p class="sec-sub pf-sub">Każdy projekt to indywidualne podejście i dbałość o każdy detal.</p>
     </div>
     <div class="portfolio-grid reveal">
       <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Kancelaria Adwokacka">
+        <div class="portfolio-mock pm-kancelaria">
+          <div class="pm-header pm-header--dark">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div class="pm-row pm-row--title pm-row--grad"></div>
+            <div class="pm-row pm-row--sub pm-row--faint" style="margin-top:4px"></div>
+            <div class="pm-row pm-row--sub pm-row--fainter" style="width:70%"></div>
+            <div class="pm-cards-row">
+              <div class="pm-card pm-card--purple"></div>
+              <div class="pm-card pm-card--blue"></div>
+            </div>
+          </div>
+        </div>
         <div class="portfolio-overlay">
           <div class="portfolio-tag">Strona WWW</div>
           <h4>Kancelaria Adwokacka</h4>
@@ -258,7 +516,30 @@
         </div>
       </div>
       <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Salon Kosmetyczny">
+        <div class="portfolio-mock pm-salon">
+          <div class="pm-header pm-header--light">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div class="pm-salon-nav">
+              <div class="pm-salon-logo"></div>
+              <div class="pm-salon-links">
+                <div class="pm-salon-link"></div>
+                <div class="pm-salon-link"></div>
+              </div>
+            </div>
+            <div class="pm-salon-product">
+              <div class="pm-salon-img"></div>
+              <div class="pm-salon-info">
+                <div class="pm-row pm-row--title pm-row--rose"></div>
+                <div class="pm-row pm-row--sub pm-row--rosefaint" style="margin-bottom:4px"></div>
+                <div class="pm-row pm-row--sub pm-row--rosefaint" style="width:60%;margin-bottom:12px"></div>
+                <div class="pm-salon-btn"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="portfolio-overlay">
           <div class="portfolio-tag">E-commerce</div>
           <h4>Salon Kosmetyczny</h4>
@@ -266,7 +547,22 @@
         </div>
       </div>
       <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Restauracja">
+        <div class="portfolio-mock pm-restauracja">
+          <div class="pm-header pm-header--darkgreen">
+            <div class="pm-dot" style="background:#ff5f57"></div>
+            <div class="pm-dot" style="background:#febc2e"></div>
+          </div>
+          <div class="pm-body">
+            <div class="pm-row pm-row--title pm-row--green" style="margin-bottom:8px"></div>
+            <div class="pm-row pm-row--sub pm-row--faint" style="margin-bottom:4px"></div>
+            <div class="pm-row pm-row--sub pm-row--fainter" style="width:65%;margin-bottom:14px"></div>
+            <div class="pm-rest-cards">
+              <div class="pm-rest-card pm-rest-card--1"></div>
+              <div class="pm-rest-card pm-rest-card--2"></div>
+              <div class="pm-rest-card pm-rest-card--3"></div>
+            </div>
+          </div>
+        </div>
         <div class="portfolio-overlay">
           <div class="portfolio-tag">Branding</div>
           <h4>Restauracja</h4>
@@ -330,57 +626,77 @@
   </div>
 </section>
 
-<!-- PORTFOLIO GRAFIKA -->
-<section class="portfolio" id="portfolio-grafika">
+<!-- O MARCE — oryginalna sekcja bez zmian -->
+<section class="about-new" id="o-marce">
   <div class="container">
-    <div class="reveal">
-      <div class="sec-label">Realizacje graficzne</div>
-      <div class="sec-title">Ostatnie projekty graficzne</div>
-      <p class="sec-sub" style="color:var(--muted)">Social media, materiały drukowane i identyfikacja wizualna dla naszych klientów.</p>
-    </div>
-    <div class="portfolio-grid reveal">
-      <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Social Media Salon Beauty">
-        <div class="portfolio-overlay">
-          <div class="portfolio-tag">Social Media</div>
-          <h4>Zestaw Cyfrowy — Salon Beauty</h4>
-          <p>FB / IG / LinkedIn + stopka e-mail</p>
+    <div class="about-new__inner reveal">
+
+      <div class="about-left">
+        <div class="about-left__logo-wrap">
+          <div class="about-left__grid"></div>
+          <img src="images/logo.png" alt="Pixiart" class="about-left__logo">
+          <div class="about-left__sep"></div>
+          <span class="about-left__studio">Design &amp; Development Studio</span>
+        </div>
+        <div class="about-left__stats">
+          <div class="about-stat">
+            <div class="about-stat__icon">🎯</div>
+            <div class="about-stat__val">Realne</div>
+            <div class="about-stat__key">Wsparcie biznesu</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat__icon">⚡</div>
+            <div class="about-stat__val">Nowoczesna</div>
+            <div class="about-stat__key">Architektura IT</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat__icon">✦</div>
+            <div class="about-stat__val">Spójna</div>
+            <div class="about-stat__key">Identyfikacja wizualna</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat__icon">🚀</div>
+            <div class="about-stat__val">Szybka</div>
+            <div class="about-stat__key">Realizacja projektów</div>
+          </div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=600&q=80" alt="DTP Restauracja">
-        <div class="portfolio-overlay">
-          <div class="portfolio-tag">DTP / Druk</div>
-          <h4>Zestaw DTP — Restauracja</h4>
-          <p>Ulotka A5 + voucher + plakat</p>
-        </div>
+
+      <div class="about-right">
+        <div class="sec-label">O marce</div>
+        <h2 class="about-new__title">
+          Projektujemy z<br>
+          <span class="about-new__title--grad">pasją i celem</span>
+        </h2>
+        <p class="about-new__body">
+          Łączymy estetykę z funkcjonalnością. Nasze projekty to nie tylko ładne obrazki — to przemyślane narzędzia biznesowe, które pomagają Ci rosnąć i wyróżnić się na rynku.
+        </p>
+        <ul class="about-checklist">
+          <li>Strony WWW i sklepy internetowe</li>
+          <li>Spójna identyfikacja wizualna i branding</li>
+          <li>Grafika cyfrowa i materiały do druku</li>
+          <li>Opieka techniczna i pozycjonowanie SEO</li>
+        </ul>
       </div>
-      <div class="portfolio-item">
-        <img class="portfolio-img" src="https://images.unsplash.com/photo-1634084462412-b54873c0a56d?w=600&q=80" alt="Identyfikacja Wizualna">
-        <div class="portfolio-overlay">
-          <div class="portfolio-tag">Branding</div>
-          <h4>Identyfikacja wizualna — Gabinet</h4>
-          <p>Logo + kolory + wizytówki + social media</p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
 <!-- OPINIE -->
-<section class="reviews" id="opinie">
+<section class="reviews svg-lines-bg" id="opinie">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Opinie klientów</div>
       <div class="sec-title">Co mówią o nas klienci?</div>
-      <p class="sec-sub" style="color:var(--muted)">Poznaj opinie firm, które zdecydowały się na współpracę z Pixiart.</p>
+      <p class="sec-sub reviews-sub">Poznaj opinie firm, które zdecydowały się na współpracę z Pixiart.</p>
     </div>
     <div class="reviews-grid reveal">
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <p class="review-text">"Strona, którą stworzyli dla mojej kancelarii, przeszła moje oczekiwania. Profesjonalizm, szybkość i świetny kontakt na każdym etapie projektu."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#9d26ff,#0ec1f8)">MK</div>
+          <div class="reviewer-avatar reviewer-avatar--purple">MK</div>
           <div>
             <div class="reviewer-name">Marcin Kowalski</div>
             <div class="reviewer-role">Adwokat, Kancelaria Kowalski</div>
@@ -391,7 +707,7 @@
         <div class="stars">★★★★★</div>
         <p class="review-text">"Zamawiałam identyfikację wizualną i jestem zachwycona. Wizytówki, ulotki, social media — wszystko spójne i piękne. Polecam każdej firmie!"</p>
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f43f8e,#f97316)">AN</div>
+          <div class="reviewer-avatar reviewer-avatar--pink">AN</div>
           <div>
             <div class="reviewer-name">Anna Nowak</div>
             <div class="reviewer-role">Właścicielka, Salon Piękności Ania</div>
@@ -402,75 +718,12 @@
         <div class="stars">★★★★★</div>
         <p class="review-text">"Bardzo szybka realizacja i efekty powyżej oczekiwań. Strona wygląda świetnie zarówno na komputerze jak i telefonie. Zdecydowanie wrócę z kolejnym projektem."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#0ec1f8,#22c55e)">PW</div>
+          <div class="reviewer-avatar reviewer-avatar--teal">PW</div>
           <div>
             <div class="reviewer-name">Piotr Wiśniewski</div>
             <div class="reviewer-role">CEO, TechStart Sp. z o.o.</div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- O MARCE — bento logo card -->
-<section style="padding:100px 0;background:var(--bg);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;align-items:center;" class="reveal about-grid">
-      <div>
-        <div class="sec-label">O marce</div>
-        <div class="sec-title">Nowoczesne podejście do designu</div>
-        <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;margin-bottom:30px;">
-          Łączymy estetykę z funkcjonalnością. Nasze projekty to nie tylko ładne obrazki — to przemyślane narzędzia biznesowe, które pomagają Ci rosnąć.
-        </p>
-        <div class="about__stats">
-          <div class="stat">
-            <span class="stat__number">Realne</span>
-            <span class="stat__label">Wsparcie biznesu</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number" style="color:var(--blue)">Nowoczesna</span>
-            <span class="stat__label">Architektura IT</span>
-          </div>
-        </div>
-      </div>
-      <!-- BENTO LOGO CARD -->
-      <div style="display:flex;justify-content:center;align-items:center;">
-        <div class="bento-logo-card">
-          <img class="about__logo-styl" src="images/logo.png" alt="Pixiart">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="reveal">
-      <div class="sec-label">FAQ</div>
-      <div class="sec-title">Najczęstsze pytania</div>
-    </div>
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Ile czasu trwa realizacja strony internetowej?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Standardowa strona www realizowana jest w ciągu 7–14 dni roboczych od momentu dostarczenia materiałów. Projekty indywidualne wyceniamy i ustalamy harmonogram indywidualnie — zazwyczaj 3–6 tygodni.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Czy mogę samodzielnie edytować stronę po wdrożeniu?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Tak — wszystkie strony dostarczamy z przyjaznym panelem administracyjnym (CMS), który pozwala edytować treści, zdjęcia i ceny bez żadnej wiedzy technicznej. Dodatkowo przeszkolimy Cię z obsługi w ramach projektu.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Co zawiera opieka w abonamencie?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">W ramach abonamentu zapewniamy: hosting i domeny, regularne aktualizacje systemu, kopie zapasowe, certyfikat SSL, wsparcie mailowe i drobne zmiany na stronie (do 1h/msc). Większe modyfikacje wyceniamy oddzielnie.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Czy robicie strony dla małych firm i jednoosobowych działalności?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Oczywiście! Spora część naszych klientów to właśnie JDG i małe firmy. Rozumiemy potrzeby i budżety małych przedsiębiorców — dlatego oferujemy elastyczne pakiety i możliwość rozłożenia płatności na raty.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Jak wygląda proces współpracy?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Zaczynamy od bezpłatnej konsultacji, gdzie poznajemy Twoje potrzeby. Następnie przygotowujemy wycenę i brief. Po akceptacji: projekt graficzny → Twoja akceptacja → wdrożenie → testy → publikacja. Na każdym etapie masz pełny wgląd i możliwość zgłaszania poprawek.</div></div>
       </div>
     </div>
   </div>
@@ -483,13 +736,6 @@
       <div class="sec-label">Opieka po wdrożeniu</div>
       <div class="sec-title">Pakiety abonamentowe</div>
       <p class="sec-sub">Regularna opieka, aktualizacje i rozwój strony w jednym pakiecie miesięcznym.</p>
-    </div>
-    <div class="wsparcie-grid reveal" style="margin-bottom:52px;">
-      <div class="wsparcie-box"><div class="w-icon">🔍</div><div class="w-label">SEO</div></div>
-      <div class="wsparcie-box"><div class="w-icon">🔄</div><div class="w-label">Aktualizacje</div></div>
-      <div class="wsparcie-box"><div class="w-icon">📊</div><div class="w-label">Analityka</div></div>
-      <div class="wsparcie-box"><div class="w-icon">📄</div><div class="w-label">Landingi</div></div>
-      <div class="wsparcie-box"><div class="w-icon">💬</div><div class="w-label">Wsparcie</div></div>
     </div>
     <div class="care-cards reveal">
       <div class="care-card">
@@ -566,95 +812,247 @@
         <a href="kontakt.html" class="card-btn">Wybierz Max</a>
       </div>
     </div>
-    <p class="reveal" style="text-align:center;color:#999;font-size:13px;margin-top:28px">
-      Potrzebujesz więcej produktów lub zmian? <a href="kontakt.html" style="color:#9d26ff;font-weight:600;text-decoration:none">Wycenimy indywidualnie →</a>
+    <p class="reveal care-note">
+      Potrzebujesz więcej produktów lub zmian? <a href="kontakt.html" class="care-note__link">Wycenimy indywidualnie →</a>
     </p>
   </div>
 </section>
 
-<!-- PODSUMOWANIE -->
-<section style="background:var(--bg2);padding:100px 0;overflow:hidden;">
+<!-- FAQ -->
+<section class="faq svg-lines-bg" id="faq">
   <div class="container">
-    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 64px;">
-      <div class="sec-label" style="display:flex;justify-content:center;">Kompleksowa obsługa</div>
-      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.8px;color:var(--text);margin-bottom:20px;line-height:1.1;">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania</div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile czasu trwa realizacja strony internetowej?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standardowa strona www realizowana jest w ciągu 7–14 dni roboczych od momentu dostarczenia materiałów. Projekty indywidualne wyceniamy i ustalamy harmonogram indywidualnie — zazwyczaj 3–6 tygodni.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy mogę samodzielnie edytować stronę po wdrożeniu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — wszystkie strony dostarczamy z przyjaznym panelem administracyjnym (CMS), który pozwala edytować treści, zdjęcia i ceny bez żadnej wiedzy technicznej. Dodatkowo przeszkolimy Cię z obsługi w ramach projektu.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Co zawiera opieka w abonamencie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">W ramach abonamentu zapewniamy: hosting i domeny, regularne aktualizacje systemu, kopie zapasowe, certyfikat SSL, wsparcie mailowe i drobne zmiany na stronie (do 1h/msc). Większe modyfikacje wyceniamy oddzielnie.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy robicie strony dla małych firm i jednoosobowych działalności?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Oczywiście! Spora część naszych klientów to właśnie JDG i małe firmy. Rozumiemy potrzeby i budżety małych przedsiębiorców — dlatego oferujemy elastyczne pakiety i możliwość rozłożenia płatności na raty.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jak wygląda proces współpracy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Zaczynamy od bezpłatnej konsultacji, gdzie poznajemy Twoje potrzeby. Następnie przygotowujemy wycenę i brief. Po akceptacji: projekt graficzny → Twoja akceptacja → wdrożenie → testy → publikacja. Na każdym etapie masz pełny wgląd i możliwość zgłaszania poprawek.</div>
+        </div>
+      </div>
+    </div>
+    <canvas id="torus-faq-canvas" class="faq-canvas"></canvas>
+  </div>
+</section>
+
+<!-- PODSUMOWANIE -->
+<section class="summary-section">
+  <div class="container">
+    <div class="reveal summary-header">
+      <div class="sec-label summary-label">Kompleksowa obsługa</div>
+      <h2 class="summary-title">
         Wszystko, czego potrzebuje<br>
-        <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Twoja marka</span>
+        <span class="summary-title--grad">Twoja marka</span>
         — w jednym miejscu
       </h2>
-      <p style="color:var(--muted);font-size:18px;font-weight:300;line-height:1.7;">
+      <p class="summary-sub">
         Nie musisz szukać osobno grafika, webdevelopera i drukarni. U nas dostajesz wszystko spójnie — od pierwszego piksela po gotowy wydruk.
       </p>
     </div>
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:var(--radius);overflow:hidden;">
-      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
-        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(157,38,255,.15) 0%,transparent 70%);pointer-events:none;"></div>
-        <div style="font-size:40px;margin-bottom:20px;">🎨</div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Wyjątkowy webdesign</h3>
-        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Strony i sklepy, które nie wyglądają jak kolejny szablon z internetu. Każdy projekt to indywidualna koncepcja.</p>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Strony wizytówkowe i firmowe</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Sklepy internetowe e-commerce</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Landing page i kampanie</div>
-        </div>
+    <div class="reveal summary-grid">
+      <div class="summary-card">
+        <div class="summary-card__orb summary-card__orb--purple"></div>
+        <div class="summary-card__icon">🎨</div>
+        <h3 class="summary-card__title">Wyjątkowy webdesign</h3>
+        <p class="summary-card__body">Strony i sklepy, które nie wyglądają jak kolejny szablon z internetu. Każdy projekt to indywidualna koncepcja — przemyślana pod Twoją branżę, klientów i cele sprzedażowe.</p>
+        <ul class="summary-card__list">
+          <li><span class="summary-dot summary-dot--purple"></span>Strony wizytówkowe i firmowe</li>
+          <li><span class="summary-dot summary-dot--purple"></span>Sklepy internetowe e-commerce</li>
+          <li><span class="summary-dot summary-dot--purple"></span>Landing page i kampanie</li>
+        </ul>
       </div>
-      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;border-left:1px solid rgba(255,255,255,.06);border-right:1px solid rgba(255,255,255,.06);transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
-        <div style="font-size:40px;margin-bottom:20px;">✦</div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Spójna komunikacja wizualna</h3>
-        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Logotyp, kolory, typografia, social media, stopka e-mail — wszystko zaprojektowane jako jeden spójny system.</p>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Identyfikacja wizualna i branding</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Grafiki social media (FB / IG / LinkedIn)</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;"></span>Banery reklamowe i stopki e-mail</div>
-        </div>
+      <div class="summary-card summary-card--middle">
+        <div class="summary-card__orb summary-card__orb--blue"></div>
+        <div class="summary-card__icon">✦</div>
+        <h3 class="summary-card__title">Spójna komunikacja wizualna</h3>
+        <p class="summary-card__body">Logotyp, kolory, typografia, social media, stopka e-mail — wszystko zaprojektowane jako jeden spójny system. Twoja marka mówi jednym głosem wszędzie, gdzie się pojawia.</p>
+        <ul class="summary-card__list">
+          <li><span class="summary-dot summary-dot--blue"></span>Identyfikacja wizualna i branding</li>
+          <li><span class="summary-dot summary-dot--blue"></span>Grafiki social media (FB / IG / LinkedIn)</li>
+          <li><span class="summary-dot summary-dot--blue"></span>Banery reklamowe i stopki e-mail</li>
+        </ul>
       </div>
-      <div style="background:var(--surface);padding:48px 36px;position:relative;overflow:hidden;transition:.3s;" onmouseenter="this.style.background='#16254a'" onmouseleave="this.style.background='var(--surface)'">
-        <div style="font-size:40px;margin-bottom:20px;">🖨️</div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:12px;color:var(--text);">Druk najwyższej jakości</h3>
-        <p style="color:var(--muted);font-size:15px;line-height:1.7;font-weight:300;">Projekt, który wygląda świetnie na ekranie, musi też robić wrażenie w dłoniach klienta. CMYK, spady, 300 dpi.</p>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Wizytówki, ulotki, plakaty</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Vouchery i materiały promocyjne</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>Przygotowanie do druku (CMYK + spady)</div>
-        </div>
+      <div class="summary-card">
+        <div class="summary-card__orb summary-card__orb--green"></div>
+        <div class="summary-card__icon">🖨️</div>
+        <h3 class="summary-card__title">Druk najwyższej jakości</h3>
+        <p class="summary-card__body">Projekt, który wygląda świetnie na ekranie, musi też robić wrażenie w dłoniach klienta. Przygotowujemy pliki DTP gotowe do druku — z właściwymi spadami, kolorystyką CMYK i rozdzielczością.</p>
+        <ul class="summary-card__list">
+          <li><span class="summary-dot summary-dot--green"></span>Wizytówki, ulotki, plakaty</li>
+          <li><span class="summary-dot summary-dot--green"></span>Vouchery i materiały promocyjne</li>
+          <li><span class="summary-dot summary-dot--green"></span>Przygotowanie do druku (CMYK + spady)</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER CTA -->
-<section class="footer-cta" id="kontakt">
+<section class="footer-cta svg-lines-bg" id="kontakt">
   <div class="footer-cta-orb"></div>
-  <div class="container" style="position:relative">
+  <div class="container">
     <div class="reveal">
       <h2>Gotowy na nową jakość<br>swojej marki?</h2>
       <p>Skonsultuj się z nami bezpłatnie — bez zobowiązań.</p>
-      <a href="mailto:hello@pixiart.pl" class="btn-primary" style="font-size:16px;padding:16px 34px">Umów darmową konsultację →</a>
+      <a href="mailto:hello@pixiart.pl" class="btn-primary footer-cta-btn">Umów darmową konsultację →</a>
     </div>
   </div>
 </section>
+<section></section>
 
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-copy">© 2025 Pixiart. Wszystkie prawa zastrzeżone.</div>
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <img src="images/logo.png" alt="Pixiart" class="footer-logo">
+        <div class="footer-badge">Design &amp; Development Studio</div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook">FB</a>
+          <a href="#" class="footer-social" aria-label="Instagram">IG</a>
+          <a href="#" class="footer-social" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Nawigacja</div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Usługi</div>
+        <ul class="footer-nav">
+          <li><a href="strony.html">Strony internetowe</a></li>
+          <li><a href="sklepy.html">Sklepy e-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika i druk</a></li>
+          <li><a href="wsparcie.html">Opieka techniczna</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Kontakt</div>
+        <ul class="footer-nav footer-nav--contact">
+          <li><span>📧</span><a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a></li>
+          <li><span>⏱️</span><span>Pon–Pt, 9:00–17:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Pixiart. Wszystkie prawa zastrzeżone.</div>
       <div class="footer-links">
         <a href="#">Polityka prywatności</a>
         <a href="#">Regulamin</a>
-        <a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a>
       </div>
     </div>
   </div>
 </footer>
+
 </main>
 
-<style>
-@media(max-width:960px){
-  .about-grid{grid-template-columns:1fr!important;gap:40px!important;text-align:center;}
-}
-</style>
-<script src="main.js"></script>
 <script type="module" src="app.js"></script>
+<script>
+/* ── FAQ ── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.faq-a').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+/* ── HWW 5-STEP ANIMATION ── */
+var hwwCurrent = 0;
+
+function hwwActivate(i) {
+  const steps   = [1,2,3,4,5].map(n => document.getElementById('hwwS' + n));
+  const details = [1,2,3,4,5].map(n => document.getElementById('hwwD' + n));
+  const line    = document.getElementById('hwwLine');
+
+  steps.forEach((el, j) => {
+    el.classList.remove('hww-active', 'hww-done');
+    if (j < i)  el.classList.add('hww-done');
+    if (j === i) el.classList.add('hww-active');
+  });
+
+  details.forEach((el, j) => {
+    el.classList.remove('hww-detail-active');
+    if (j === i) el.classList.add('hww-detail-active');
+  });
+
+  const pct = [0, 25, 50, 75, 100];
+  if (line) line.style.width = pct[i] + '%';
+  hwwCurrent = i;
+}
+
+(function() {
+  const track = document.getElementById('hwwTrack');
+  if (track && 'IntersectionObserver' in window) {
+    let played = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !played) {
+        played = true;
+        hwwActivate(0);
+        setTimeout(() => hwwActivate(1), 600);
+        setTimeout(() => hwwActivate(2), 1200);
+        setTimeout(() => hwwActivate(3), 1800);
+        setTimeout(() => hwwActivate(4), 2400);
+      }
+    }, { threshold: 0.2 }).observe(track);
+  } else {
+    hwwActivate(0);
+  }
+})();
+</script>
+
 </body>
 </html>
