@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Druk reklamowy — Pixiart. Projektujemy i drukujemy ulotki, plakaty, vouchery i wizytówki. Współpracujemy z najlepszą drukarnią w Warszawie — kompleksowo od projektu po gotowy wydruk.">
+  <title>Druk reklamowy — Pixiart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="images/sygnet.png" alt="Pixiart Logo">
+    </a>
+    <ul class="nav__menu">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Start <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html#oferta">Strony WWW</a></li>
+          <li><a href="index.html#sklepy">Sklepy Online</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#komunikacja">Grafika + Druk</a></li>
+          <li><a href="index.html#opinie">Opinie</a></li>
+          <li><a href="index.html#faq">Najczęstsze pytania</a></li>
+          <li><a href="index.html#wsparcie">Opieka po wdrożeniu</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Usługi <small>▼</small></a>
+        <ul class="dropdown-menu">
+          <li><a href="strony.html">Projektowanie Stron</a></li>
+          <li><a href="sklepy.html">Sklepy E-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika + Druk</a></li>
+          <li><a href="druk.html">Druk reklamowy</a></li>
+          <li><a href="wsparcie.html">Opieka i Wsparcie</a></li>
+        </ul>
+      </li>
+      <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+      <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+      <li><a href="kontakt.html" class="nav__link nav__cta">DARMOWA WYCENA</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu__header">
+    <small class="mobile-menu__label">Menu</small>
+  </div>
+  <a href="strony.html" class="mob-link">Strony WWW</a>
+  <a href="sklepy.html" class="mob-link">Sklepy Online</a>
+  <a href="identyfikacja.html" class="mob-link">Grafika + Druk</a>
+  <a href="druk.html" class="mob-link">Druk reklamowy</a>
+  <a href="wsparcie.html" class="mob-link">Opieka i Wsparcie</a>
+  <a href="index.html#faq" class="mob-link">FAQ</a>
+  <div class="mobile-menu__cta-wrap">
+    <a href="kontakt.html" class="mob-cta">KONTAKT →</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Strona główna</a>
+      <span>/</span>
+      <a href="identyfikacja.html">Grafika + Druk</a>
+      <span>/</span>
+      <strong>Druk reklamowy</strong>
+    </div>
+    <div class="hero__inner">
+      <div>
+        <div class="hero__label">Druk reklamowy</div>
+        <h1>Od projektu do wydruku — w jednym miejscu</h1>
+        <p class="hero__sub">
+          Współpracujemy z jedną z najlepszych drukarni w Warszawie. Projektujemy, nadzorujemy druk i dbamy o efekt finalny — Ty nie musisz się o nic martwić.
+        </p>
+        <div class="hero__actions">
+          <a href="kontakt.html" class="btn-primary">Zamów bezpłatną wycenę →</a>
+          <a href="#co-drukujemy" class="btn-ghost">Co drukujemy?</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-num"><span>Projekt</span></div>
+            <div class="hero__stat-label">+ DRUK W PAKIECIE</div>
+          </div>
+          <div>
+            <div class="hero__stat-num"><span>Kontrola</span></div>
+            <div class="hero__stat-label">JAKOŚCI NA KAŻDYM ETAPIE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRINT VISUAL MOCKUP -->
+      <div class="hero__visual" style="position:relative; height:380px;">
+
+        <!-- Główna karta — ulotka -->
+        <div style="position:absolute; right:0; top:0; width:72%; border-radius:16px; overflow:hidden;
+                    border:1px solid rgba(255,255,255,.1); box-shadow:0 30px 80px rgba(0,0,0,.5);
+                    animation:floatA 7s ease-in-out infinite; background:linear-gradient(135deg,#1a0033,#0a1a40);">
+          <div style="background:rgba(255,255,255,.04); padding:10px 14px; display:flex; align-items:center; gap:6px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#ff5f57"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#febc2e"></div>
+            <div style="flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px;margin:0 20px"></div>
+          </div>
+          <div style="padding:22px 24px; display:flex; flex-direction:column; gap:10px;">
+            <div style="width:55%;height:14px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:4px"></div>
+            <div style="width:80%;height:8px;background:rgba(255,255,255,.25);border-radius:3px"></div>
+            <div style="width:65%;height:8px;background:rgba(255,255,255,.15);border-radius:3px"></div>
+            <div style="height:90px;background:linear-gradient(135deg,rgba(157,38,255,.2),rgba(14,193,248,.1));border-radius:10px;margin:6px 0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);opacity:.7;"></div>
+            </div>
+            <div style="width:70%;height:7px;background:rgba(255,255,255,.2);border-radius:3px"></div>
+            <div style="width:50%;height:7px;background:rgba(255,255,255,.12);border-radius:3px"></div>
+            <div style="width:88px;height:28px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);border-radius:6px;margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <!-- Mini wizytówka -->
+        <div style="position:absolute; left:0; bottom:16px; width:44%; border-radius:14px; overflow:hidden;
+                    border:1px solid rgba(255,255,255,.1); box-shadow:0 20px 50px rgba(0,0,0,.5);
+                    animation:floatB 8s ease-in-out infinite; background:linear-gradient(135deg,#111d35,#1a2d50);">
+          <div style="padding:16px 18px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);flex-shrink:0;"></div>
+              <div style="width:60px;height:8px;background:rgba(255,255,255,.45);border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="height:6px;width:90%;background:rgba(255,255,255,.2);border-radius:3px;"></div>
+              <div style="height:6px;width:70%;background:rgba(255,255,255,.15);border-radius:3px;"></div>
+              <div style="height:6px;width:80%;background:rgba(255,255,255,.12);border-radius:3px;"></div>
+            </div>
+            <div style="margin-top:12px;height:1px;background:rgba(255,255,255,.08);"></div>
+            <div style="margin-top:10px;display:flex;justify-content:flex-end;">
+              <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#9d26ff,#0ec1f8);opacity:.5;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DLACZEGO WARTO — trust strip -->
+<div style="background:var(--bg2); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); padding:40px 0;">
+  <div class="container">
+    <div class="reveal" style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+
+      <div style="text-align:center; padding:20px;">
+        <div style="font-size:32px; margin-bottom:10px;">🏆</div>
+        <div style="font-family:var(--font-heading); font-weight:var(--fw-bold); font-size:15px; margin-bottom:6px;">Najlepsza drukarnia w Warszawie</div>
+        <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Współpracujemy z partnerem o ugruntowanej renomie i wieloletnim doświadczeniu</div>
+      </div>
+
+      <div style="text-align:center; padding:20px; border-left:1px solid rgba(255,255,255,.06);">
+        <div style="font-size:32px; margin-bottom:10px;">🎨</div>
+        <div style="font-family:var(--font-heading); font-weight:var(--fw-bold); font-size:15px; margin-bottom:6px;">Drukujemy tylko to, co projektujemy</div>
+        <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Żadnych zewnętrznych plików — pełna kontrola jakości projektu i wydruku</div>
+      </div>
+
+      <div style="text-align:center; padding:20px; border-left:1px solid rgba(255,255,255,.06);">
+        <div style="font-size:32px; margin-bottom:10px;">✅</div>
+        <div style="font-family:var(--font-heading); font-weight:var(--fw-bold); font-size:15px; margin-bottom:6px;">Nadzorujemy cały proces</div>
+        <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Od briefu przez projekt, przygotowanie do druku, aż po odbiór gotowych materiałów</div>
+      </div>
+
+      <div style="text-align:center; padding:20px; border-left:1px solid rgba(255,255,255,.06);">
+        <div style="font-size:32px; margin-bottom:10px;">📦</div>
+        <div style="font-family:var(--font-heading); font-weight:var(--fw-bold); font-size:15px; margin-bottom:6px;">Gotowe do ręki</div>
+        <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Dostarczamy gotowe wydruki — możliwość dostawy kurierem lub odbioru w Warszawie</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DLACZEGO KOMPLEKSOWO -->
+<section style="background:var(--bg);" id="dlaczego">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Nasza filozofia</div>
+      <div class="sec-title">Projekt i druk muszą iść w parze</div>
+      <p class="sec-sub" style="color:var(--muted);">
+        Większość agencji projektuje, a Ty szukasz drukarni na własną rękę. U nas działa to inaczej.
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:52px;" class="reveal">
+
+      <!-- Problem -->
+      <div style="background:var(--surface); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:36px;">
+        <div style="font-size:28px; margin-bottom:16px;">😓</div>
+        <h3 style="font-size:20px; font-weight:var(--fw-bold); margin-bottom:16px; color:var(--text);">Jak to wygląda zazwyczaj</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:#f87171; font-weight:var(--fw-bold); flex-shrink:0;">✕</span>
+            Dostajesz projekt graficzny i musisz sam szukać drukarni
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:#f87171; font-weight:var(--fw-bold); flex-shrink:0;">✕</span>
+            Okazuje się, że pliki mają złe profile kolorów lub brakuje spadów
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:#f87171; font-weight:var(--fw-bold); flex-shrink:0;">✕</span>
+            Wydruk wychodzi inaczej niż na ekranie — kolory, detale, jakość
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:#f87171; font-weight:var(--fw-bold); flex-shrink:0;">✕</span>
+            Tracisz czas i pieniądze na poprawki lub drugi nakład
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:#f87171; font-weight:var(--fw-bold); flex-shrink:0;">✕</span>
+            Nikt nie bierze odpowiedzialności za efekt końcowy
+          </li>
+        </ul>
+      </div>
+
+      <!-- Rozwiązanie -->
+      <div style="background:var(--surface); border:2px solid rgba(157,38,255,.3); border-radius:20px; padding:36px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:var(--grad);"></div>
+        <div style="font-size:28px; margin-bottom:16px;">✨</div>
+        <h3 style="font-size:20px; font-weight:var(--fw-bold); margin-bottom:16px; color:var(--text);">Jak to działa u nas</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:var(--accent); font-weight:var(--fw-bold); flex-shrink:0;">✓</span>
+            Projekt i druk zamawiasz w jednym miejscu — jeden kontakt, jeden proces
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:var(--accent); font-weight:var(--fw-bold); flex-shrink:0;">✓</span>
+            Pliki przygotowujemy sami — CMYK, spady, 300 dpi, profil pod konkretną maszynę
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:var(--accent); font-weight:var(--fw-bold); flex-shrink:0;">✓</span>
+            Nadzorujemy wydruk u naszego partnera — wiemy jak wychodzi na konkretnym papierze
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:var(--accent); font-weight:var(--fw-bold); flex-shrink:0;">✓</span>
+            Efekt finalny jest taki jak projekt — kolory, ostrość, jakość papieru
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">
+            <span style="color:var(--accent); font-weight:var(--fw-bold); flex-shrink:0;">✓</span>
+            Bierzemy pełną odpowiedzialność — od pomysłu po gotowy wydruk w Twoich rękach
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CO DRUKUJEMY -->
+<section class="light" id="co-drukujemy">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Zakres usług</div>
+      <div class="sec-title">Co możemy dla Ciebie wydrukować?</div>
+      <p class="sec-sub">Drukujemy wyłącznie materiały, które sami zaprojektowaliśmy — dzięki temu mamy pełną kontrolę nad jakością.</p>
+    </div>
+
+    <div class="cards-grid reveal">
+
+      <!-- WIZYTÓWKI -->
+      <div class="card">
+        <div class="card-icon">🪪</div>
+        <h3>Wizytówki</h3>
+        <p class="muted">Pierwsza rzecz, którą dasz klientowi</p>
+        <div class="price">od 149 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">projekt + druk 100 szt.</p>
+        <ul>
+          <li>Projekt dwustronny</li>
+          <li>Papier 350g / 400g do wyboru</li>
+          <li>Lakier UV lub matowy</li>
+          <li>Zaokrąglone rogi (opcja)</li>
+          <li>Format 85×55 mm (standard)</li>
+          <li>Dostawa lub odbiór w Warszawie</li>
+        </ul>
+        <div class="exchange">💡 WLICZONE W PAKIET BIZNES WWW</div>
+        <a href="kontakt.html" class="card-btn">Zamów wycenę</a>
+      </div>
+
+      <!-- ULOTKI -->
+      <div class="card card--featured">
+        <div class="badge-top">⚡ NAJCZĘŚCIEJ ZAMAWIANE</div>
+        <div class="card-icon">📄</div>
+        <h3>Ulotki</h3>
+        <p class="muted">Materiał, który trafia prosto do rąk klientów</p>
+        <div class="price">od 299 zł</div>
+        <p style="font-size:12px;color:#888;margin:-8px 0 14px">projekt + druk 250 szt.</p>
+        <ul>
+          <li>Projekt jednostronny lub dwustronny</li>
+          <li>Formaty: A5, DL, A6 do wyboru</li>
+          <li>Papier kredowany 130g–170g</li>
+          <li>Wykończenie: mat lub gloss</li>
+          <li>Możliwość składania (harmonijka, Z, C)</li>
+          <li><strong>Dostawa kurierem w cenie</strong></li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA GRAFIKI SOCIAL MEDIA</div>
+        <a href="kontakt.html" class="card-btn card-btn--primary">Zamów teraz →</a>
+      </div>
+
+      <!-- PLAKATY -->
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Plakaty</h3>
+        <p class="muted">Przyciągnij wzrok — w lokalu i na zewnątrz</p>
+        <div class="price">od 199 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">projekt + druk 50 szt.</p>
+        <ul>
+          <li>Formaty: A4, A3, A2, B1</li>
+          <li>Papier kredowany 170g–250g</li>
+          <li>Plakaty eventowe i stałe</li>
+          <li>Wersja do ramki lub do naklejenia</li>
+          <li>Laminat mat lub gloss (opcja)</li>
+          <li>Przygotowanie do druku offsetowego</li>
+        </ul>
+        <div class="exchange">💡 ZAMIEŃ NA BANER REKLAMOWY</div>
+        <a href="kontakt.html" class="card-btn">Zamów wycenę</a>
+      </div>
+
+    </div>
+
+    <!-- DRUGI RZĄD -->
+    <div class="cards-grid reveal" style="margin-top:24px;">
+
+      <!-- VOUCHERY -->
+      <div class="card">
+        <div class="card-icon">🎁</div>
+        <h3>Vouchery prezentowe</h3>
+        <p class="muted">Sprzedaj więcej — klienci kupują w prezencie</p>
+        <div class="price">od 249 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">projekt 3 warianty + druk 100 szt.</p>
+        <ul>
+          <li>3 warianty kwotowe w projekcie</li>
+          <li>Format zbliżony do karty płatniczej</li>
+          <li>Papier 400g + lakier UV spot</li>
+          <li>Możliwość personalizacji numeracji</li>
+          <li>Projekt koperty pasującej do vouchera</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Zamów wycenę</a>
+      </div>
+
+      <!-- KATALOGI / FOLDERY -->
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <h3>Katalogi i foldery</h3>
+        <p class="muted">Profesjonalna prezentacja oferty</p>
+        <div class="price">od 599 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">projekt + druk 50 szt.</p>
+        <ul>
+          <li>Folder składany: 3-, 4-, 6-panelowy</li>
+          <li>Katalog produktowy do 12 stron</li>
+          <li>Papier kredowany 130g–200g</li>
+          <li>Okładka uszlachetniana lakierem</li>
+          <li>PDF do wysyłki mailowej w cenie</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Zamów wycenę</a>
+      </div>
+
+      <!-- BANERY -->
+      <div class="card">
+        <div class="card-icon">🪟</div>
+        <h3>Banery i roll-upy</h3>
+        <p class="muted">Widoczność na eventach i w lokalu</div>
+        <div class="price">od 179 zł</div>
+        <p style="font-size:12px;color:#aaa;margin:-8px 0 14px">projekt + druk 1 szt.</p>
+        <ul>
+          <li>Roll-up 85×200 cm (z kasetą)</li>
+          <li>Baner PCV frontlit lub backlit</li>
+          <li>Wydruk solwentowy UV odporny na warunki atm.</li>
+          <li>Oczka lub folia do nadruku szyby</li>
+          <li>Projekt przygotowany pod wymiar</li>
+        </ul>
+        <a href="kontakt.html" class="card-btn">Zamów wycenę</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NASZ PARTNER -->
+<section style="background:var(--bg);" id="partner">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Nasz partner druku</div>
+      <div class="sec-title">Jedna z najlepszych drukarni w Warszawie</div>
+      <p class="sec-sub" style="color:var(--muted);">
+        Nie współpracujemy z anonimowymi platformami online. Mamy sprawdzonego, lokalnego partnera.
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-top:52px;" class="reveal">
+
+      <div>
+        <div style="display:flex; flex-direction:column; gap:24px;">
+
+          <div style="display:flex; align-items:flex-start; gap:20px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:var(--grad-soft); border:1px solid rgba(157,38,255,.2); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0;">🏭</div>
+            <div>
+              <h4 style="font-size:16px; font-weight:var(--fw-bold); margin-bottom:6px;">Drukarnia offsetowa i cyfrowa</h4>
+              <p style="font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.7;">Nasz partner dysponuje maszynami offsetowymi do dużych nakładów oraz cyfrowymi do krótkich serii — idealne pod każde zamówienie.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:20px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:var(--grad-soft); border:1px solid rgba(157,38,255,.2); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0;">🎨</div>
+            <div>
+              <h4 style="font-size:16px; font-weight:var(--fw-bold); margin-bottom:6px;">Znamy ich maszyny na wylot</h4>
+              <p style="font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.7;">Projektujemy z myślą o konkretnych maszynach i papierach. Wiemy jak dane kolory wychodzą w druku — nie ma nieprzyjemnych niespodzianek.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:20px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:var(--grad-soft); border:1px solid rgba(157,38,255,.2); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0;">⚡</div>
+            <div>
+              <h4 style="font-size:16px; font-weight:var(--fw-bold); margin-bottom:6px;">Ekspresowe terminy</h4>
+              <p style="font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.7;">Standardowo materiały są gotowe w 3–7 dni roboczych. W trybie ekspresowym (dopłata) realizujemy zamówienia nawet następnego dnia.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:20px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:var(--grad-soft); border:1px solid rgba(157,38,255,.2); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0;">📍</div>
+            <div>
+              <h4 style="font-size:16px; font-weight:var(--fw-bold); margin-bottom:6px;">Warszawa + dostawa w całej Polsce</h4>
+              <p style="font-size:14px; color:var(--muted); font-weight:var(--fw-light); line-height:1.7;">Jeśli jesteś w Warszawie — możesz odebrać osobiście. Dla reszty Polski wysyłamy kurierem DPD lub InPost następnego dnia po zakończeniu druku.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Infografika procesu -->
+      <div style="background:var(--surface); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:36px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:var(--grad);"></div>
+
+        <div style="font-size:11px; font-weight:var(--fw-bold); letter-spacing:2px; color:var(--accent); text-transform:uppercase; font-family:var(--font-ui); margin-bottom:28px;">Jak wygląda nasz proces</div>
+
+        <div style="display:flex; flex-direction:column; gap:0;">
+
+          <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:24px; border-left:2px solid rgba(157,38,255,.3); margin-left:20px; padding-left:24px; position:relative;">
+            <div style="position:absolute; left:-10px; top:0; width:20px; height:20px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:var(--fw-black); color:#fff; font-family:var(--font-heading);">1</div>
+            <div>
+              <div style="font-weight:var(--fw-bold); font-size:15px; margin-bottom:4px;">Brief i projekt graficzny</div>
+              <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Zbieramy informacje, projektujemy, akceptujesz gotowy projekt</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:24px; border-left:2px solid rgba(157,38,255,.3); margin-left:20px; padding-left:24px; position:relative;">
+            <div style="position:absolute; left:-10px; top:0; width:20px; height:20px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:var(--fw-black); color:#fff; font-family:var(--font-heading);">2</div>
+            <div>
+              <div style="font-weight:var(--fw-bold); font-size:15px; margin-bottom:4px;">Przygotowanie plików do druku</div>
+              <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">CMYK, spady 3 mm, 300 dpi — plik idealny pod konkretną maszynę drukarską</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:24px; border-left:2px solid rgba(157,38,255,.3); margin-left:20px; padding-left:24px; position:relative;">
+            <div style="position:absolute; left:-10px; top:0; width:20px; height:20px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:var(--fw-black); color:#fff; font-family:var(--font-heading);">3</div>
+            <div>
+              <div style="font-weight:var(--fw-bold); font-size:15px; margin-bottom:4px;">Druk u naszego partnera</div>
+              <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Przekazujemy plik i nadzorujemy realizację — jesteśmy w stałym kontakcie z drukarnią</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:16px; align-items:flex-start; margin-left:20px; padding-left:24px; position:relative;">
+            <div style="position:absolute; left:-10px; top:0; width:20px; height:20px; border-radius:50%; background:linear-gradient(135deg,#22c55e,#16a34a); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:var(--fw-black); color:#fff; font-family:var(--font-heading);">✓</div>
+            <div>
+              <div style="font-weight:var(--fw-bold); font-size:15px; margin-bottom:4px;">Gotowe materiały trafiają do Ciebie</div>
+              <div style="font-size:13px; color:var(--muted); font-weight:var(--fw-light); line-height:1.6;">Odbiór osobisty w Warszawie lub dostawa kurierem w całej Polsce</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WAŻNA ZASADA -->
+<section style="background:var(--bg2); padding:60px 0;">
+  <div class="container">
+    <div class="reveal">
+      <div style="background:var(--surface); border:1px solid rgba(157,38,255,.3); border-radius:20px; padding:48px; text-align:center; position:relative; overflow:hidden; max-width:800px; margin:0 auto;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:var(--grad);"></div>
+        <div style="font-size:48px; margin-bottom:20px;">⚠️</div>
+        <h3 style="font-family:var(--font-heading); font-size:clamp(20px,3vw,28px); font-weight:var(--fw-black); margin-bottom:16px; color:var(--text);">Drukujemy tylko to, co sami zaprojektowaliśmy</h3>
+        <p style="font-size:16px; color:var(--muted); font-weight:var(--fw-light); line-height:1.8; max-width:560px; margin:0 auto 20px;">
+          To nie jest ograniczenie — to nasza gwarancja jakości. Gdy bierzemy plik nieznanego nam projektu, nie możemy odpowiadać za efekt wydruku. Dlatego przyjmujemy do druku wyłącznie własne projekty — mamy pełną kontrolę nad każdym etapem.
+        </p>
+        <div style="display:inline-flex; align-items:center; gap:8px; background:var(--grad-soft); border:1px solid rgba(157,38,255,.3); border-radius:30px; padding:8px 20px; font-size:13px; font-weight:var(--fw-medium); color:var(--blue);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite;flex-shrink:0;"></span>
+          Chcesz wydrukować — zacznij od projektu z nami
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg); position:relative;" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Najczęstsze pytania o druk</div>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy muszę zamówić u Was projekt, żeby skorzystać z usługi druku?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tak — drukujemy wyłącznie materiały, które sami zaprojektowaliśmy. To nasza zasada gwarancji jakości. Tylko wtedy możemy odpowiedzieć za efekt końcowy — od kolorów po jakość papieru. Jeśli potrzebujesz projektu i druku, skontaktuj się z nami — wycenimy całość w jednym pakiecie.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile kosztuje druk i czy cena jest w pakiecie z projektem?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Ceny na stronie obejmują projekt + druk razem. Koszt druku zależy od nakładu, formatu, gramatury papieru i wykończenia (lakier, laminat, itp.). Każde zamówienie wyceniamy indywidualnie — po rozmowie dostaniesz jasną wycenę bez ukrytych kosztów.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jak długo trwa realizacja od akceptacji projektu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standardowy czas produkcji to 3–5 dni roboczych po akceptacji projektu. W trybie ekspresowym (dopłata 30%) realizujemy nawet następnego dnia roboczego. Do tego czas dostawy kurierem — zazwyczaj 1 dzień roboczy na terenie Polski.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy mogę zobaczyć próbkę przed pełnym nakładem?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Przy większych zamówieniach (powyżej 500 szt.) możemy zorganizować wydruk próbny jednej sztuki do akceptacji przed pełnym nakładem. Opcja dostępna za dodatkową opłatą, ale przy dużych projektach szczerze ją polecamy.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jak wygląda dostawa gotowych materiałów?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Wysyłamy kurierem DPD lub InPost — dostawa w całej Polsce, zazwyczaj następnego dnia po zakończeniu druku. Klienci z Warszawy mogą odebrać materiały osobiście. Koszt dostawy jest wliczony w wycenę lub podawany osobno — zależy od wagi paczki.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="footer-cta svg-lines-bg" style="border-top:1px solid rgba(255,255,255,.06);">
+  <div class="footer-cta-orb"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Potrzebujesz materiałów drukowanych?</h2>
+      <p>Napisz do nas — wycenimy projekt i druk w jednym pakiecie, bez zbędnego szukania drukarni.</p>
+      <a href="kontakt.html" class="btn-primary footer-cta-btn">Zamów bezpłatną wycenę →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <img src="images/logo.png" alt="Pixiart" class="footer-logo">
+        <div class="footer-badge">Design &amp; Development Studio</div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook">FB</a>
+          <a href="#" class="footer-social" aria-label="Instagram">IG</a>
+          <a href="#" class="footer-social" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Nawigacja</div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Usługi</div>
+        <ul class="footer-nav">
+          <li><a href="strony.html">Strony internetowe</a></li>
+          <li><a href="sklepy.html">Sklepy e-commerce</a></li>
+          <li><a href="identyfikacja.html">Grafika i druk</a></li>
+          <li><a href="druk.html">Druk reklamowy</a></li>
+          <li><a href="wsparcie.html">Opieka techniczna</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Kontakt</div>
+        <ul class="footer-nav footer-nav--contact">
+          <li><span>📧</span><a href="mailto:hello@pixiart.pl">hello@pixiart.pl</a></li>
+          <li><span>⏱️</span><span>Pon–Pt, 9:00–17:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Pixiart. Wszystkie prawa zastrzeżone.</div>
+      <div class="footer-links">
+        <a href="#">Polityka prywatności</a>
+        <a href="#">Regulamin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
